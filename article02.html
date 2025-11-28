@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乳化のパラドクス - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- ファビコン -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+    <!-- ヘッダー -->
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <!-- 記事コンテンツ -->
+    <main class="article-container">
+        <article>
+            <div class="article-header header-emulsion">
+                <span class="article-id">Exp.02</span>
+                <span class="category-tag">Emulsion Physics</span>
+                <h1 class="article-main-title">乳化のパラドクス：<br>水と油を「物理的」に接着する界面化学</h1>
+                <p class="lead">
+                    マヨネーズ、ヴィネグレット、オランデーズ。<br>
+                    厨房で最も頻繁に起こる悲劇「分離（Separation）」はなぜ起きるのか？<br>
+                    水と油という永遠のライバルを、物理と化学の力で強制的に和解させる技術論。
+                </p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：自然界は「分離」を望んでいる</h2>
+                <p>
+                    まず受け入れなければならない冷酷な真実がある。<br>
+                    熱力学の法則において、水と油が混ざり合う状態（乳化）は<strong>「不安定」</strong>であり、分離した状態こそが<strong>「安定的」</strong>である。
+                </p>
+                <p>
+                    水分子は極性を持ち、互いに水素結合で引き合う。一方、油分子は非極性で、水から排斥される。
+                    ドレッシングを振って一時的に混ぜても、放置すれば必ず分離するのは、システムが最もエネルギーの低い状態（＝分離）に戻ろうとする自然の摂理（エントロピー増大）だからだ。
+                    我々料理人は、この強力な物理法則に逆らって「不安定な状態」を維持しようとしているのだ。
+                </p>
+                <div class="callout">
+                    <strong>Historical Note:</strong>
+                    1756年、フランスのリシュリュー公爵がマオン（Mahon）の港を攻略した際、祝宴のソースを作るためのクリームが不足した。
+                    シェフが苦肉の策で「卵黄と油」を混ぜて作ったソースが「マオンのソース（Mahonnaise）」、すなわちマヨネーズの起源と言われている。
+                    これは偶然が生んだ「物理学的奇跡」だった。
+                </div>
+            </section>
+
+            <section>
+                <h2>2.0 基礎原理：界面活性剤という「接着剤」</h2>
+                <p>
+                    水と油を繋ぎ止めるには、仲介役が必要だ。それが<strong>「乳化剤（Emulsifier）」</strong>である。
+                    代表的な乳化剤である卵黄中の<strong>「レシチン」</strong>は、一つの分子の中に「水を好む頭（親水基）」と「油を好む尻尾（疎水基）」の両方を持っている。
+                </p>
+
+                <!-- ▼▼ 乳化のメカニズム図解 (CSS Graphic) ▼▼ -->
+                <div class="emulsion-diagram-box">
+                    <div class="surfactant-visual">
+                        <div class="head">Hydrophilic<br>(親水基)</div>
+                        <div class="tail">Hydrophobic<br>(疎水基)</div>
+                    </div>
+                    <div class="micelle-visual">
+                        <div class="oil-droplet">
+                            <span class="label">OIL</span>
+                            <!-- レシチンが油を取り囲む様子 -->
+                            <div class="surfactant s1"></div>
+                            <div class="surfactant s2"></div>
+                            <div class="surfactant s3"></div>
+                            <div class="surfactant s4"></div>
+                            <div class="surfactant s5"></div>
+                            <div class="surfactant s6"></div>
+                            <div class="surfactant s7"></div>
+                            <div class="surfactant s8"></div>
+                        </div>
+                        <div class="water-matrix">WATER PHASE</div>
+                    </div>
+                    <p class="diagram-caption">Fig.1: 水中油滴 (O/W) 乳化におけるミセル形成モデル</p>
+                </div>
+
+                <p>
+                    レシチンは油滴の表面に吸着し、親水基を外側（水側）に向けることで「保護膜」を作る。
+                    これにより、油滴同士が衝突しても合体（分離）せず、水の中に分散し続けることができる。これが乳化の正体だ。
+                </p>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>乳化タイプ</th>
+                                <th>構造</th>
+                                <th>代表例</th>
+                                <th>口当たり</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>O/W (水中油滴)</strong></td>
+                                <td>水の中に油が浮いている</td>
+                                <td>マヨネーズ、牛乳、生クリーム</td>
+                                <td>さっぱり、冷たく感じる</td>
+                            </tr>
+                            <tr>
+                                <td><strong>W/O (油中水滴)</strong></td>
+                                <td>油の中に水が浮いている</td>
+                                <td>バター、マーガリン、ヴィネグレット</td>
+                                <td>まったり、油っぽさを感じる</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 データ：剪断力と油滴サイズの相関</h2>
+                <p>
+                    乳化の安定性は、分散している<strong>「油滴のサイズ」</strong>で決まる。
+                    油滴が小さければ小さいほど、浮力の影響を受けにくくなり、安定する。
+                    油滴を細かく砕くために必要なのが、物理的な<strong>「剪断力（Shear Force）」</strong>だ。
+                </p>
+
+                <!-- グラフエリア -->
+                <div class="visualization-container">
+                    <h3>Shear Force vs Droplet Size</h3>
+                    <div id="shear-chart">
+                        <div class="shear-bar b1">
+                            <span class="shear-label">Hand Whisk (手混ぜ)</span>
+                            <span class="droplet-size">20-50 μm (Unstable)</span>
+                        </div>
+                        <div class="shear-bar b2">
+                            <span class="shear-label">Hand Blender (ブレンダー)</span>
+                            <span class="droplet-size">5-10 μm (Stable)</span>
+                        </div>
+                        <div class="shear-bar b3">
+                            <span class="shear-label">High Pressure (工業用)</span>
+                            <span class="droplet-size">&lt;1 μm (Perfect)</span>
+                        </div>
+                    </div>
+                    <p class="caption">※強い力で攪拌するほど油滴は微細化し、白くクリーミーになり、分離しなくなる。</p>
+                </div>
+
+                <p>
+                    手立てのマヨネーズが黄色っぽく分離しやすいのに対し、ブレンダーで作ったものが白く硬いのは、油滴の細かさが桁違いだからだ。光の乱反射が増え、白く見えるのである。
+                </p>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：乳化の絶対成功メソッド</h2>
+                <p>
+                    理論を踏まえた上で、現場で決して失敗しないためのプロトコルを提示する。
+                    全ての失敗には「物理的な原因」がある。
+                </p>
+
+                <h3>Protocol A: マヨネーズの「初期乳化」と黄金比</h3>
+                <p>
+                    マヨネーズ作りで失敗する最大の原因は、最初に油を入れすぎることだ。
+                    初期段階では、卵黄（水相）に対して油（油相）が多すぎると、乳化剤が油滴を覆いきれず、即座に分離する（転相の失敗）。
+                </p>
+                <ul>
+                    <li><strong>Step 1 (核作り):</strong> ボウルに卵黄、酢、マスタードを入れ、<strong>油を入れる前によく混ぜる</strong>。ここで安定した水相のベースを作る。</li>
+                    <li><strong>Step 2 (点滴):</strong> 最初の大さじ1杯分の油は、糸のように垂らしながら全力で混ぜる。ここで微細な油滴の「種」を作れるかが勝負。</li>
+                    <li><strong>Step 3 (乳化崩壊の限界):</strong> 卵黄1個（レシチン約2g）が乳化できる油の限界量は約200ml〜250mlだ。これを超えると物理的に乳化不可能となり、突如として分離する。</li>
+                </ul>
+
+                <h3>Protocol B: オランデーズソースの温度管理</h3>
+                <p>
+                    エッグベネディクトに使う温かいソース。バター（油）と卵黄（水）の乳化だが、ここには「熱」という不安定要素が加わる。
+                </p>
+                <ul>
+                    <li><strong>Danger Zone:</strong> 卵黄は65℃付近から凝固し始める。凝固するとレシチンの構造が変わり、乳化力が失われる。</li>
+                    <li><strong>Action:</strong> 湯煎の温度は60℃以下をキープする。もしボウルの縁が固まり始めたら、直ちに氷水に当てて反応を止めること。</li>
+                </ul>
+
+                <h3>Protocol C: 分離したソースの「リカバリー（再生）」</h3>
+                <p>
+                    分離してしまったマヨネーズやオランデーズを捨てる必要はない。
+                    分離とは「油滴が合体して巨大化した状態」だ。再び細かく分散させれば元に戻る。
+                </p>
+                <div class="callout">
+                    <strong>Recovery Method:</strong><br>
+                    1. 別のボウルに<strong>小さじ1杯の水（または酢）</strong>を入れる。<br>
+                    2. 分離したソースを、そのボウルに<strong>「少しずつ」</strong>加えながら激しく混ぜる。<br>
+                    <br>
+                    ※「呼び水」を入れることで水相の比率を高め、油滴を受け入れるスペースを確保するのが物理的な解決策だ。油に水を足すのではなく、<strong>「水に油（分離液）を足す」</strong>順序が絶対である。
+                </div>
+            </section>
+
+            <div class="references">
+                <h3>References</h3>
+                <ul>
+                    <li>[1] This, Hervé. (2007). <em>Kitchen Mysteries: Revealing the Science of Cooking</em>. Columbia University Press.</li>
+                    <li>[2] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner. pp.625-631 (Sauces).</li>
+                    <li>[3] Vilgis, Thomas A. (2015). <em>The Science of Cooking</em>. Springer.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>
