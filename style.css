@@ -1,0 +1,156 @@
+/* style.css - 完全版 */
+
+:root {
+    --color-bg: #1E1E1E;       /* 背景：濃いグレー */
+    --color-text: #F0F0F0;     /* 文字：白に近いグレー */
+    --color-accent: #FF8C00;   /* アクセント：メイラード反応のオレンジ */
+    --color-line: #444444;     /* 線：薄いグレー */
+    --font-body: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+/* 記事全体のレイアウト */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 見出し */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 10px;
+    color: var(--color-accent);
+}
+h2 {
+    color: var(--color-accent);
+    margin-top: 40px;
+    border-left: 5px solid var(--color-accent);
+    padding-left: 15px;
+}
+h3 {
+    color: #ddd;
+    margin-top: 30px;
+}
+
+/* 箇条書き */
+ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+li {
+    margin-bottom: 10px;
+}
+
+/* --- 図解エリア (グラフ) の実装 No.21 --- */
+.visualization-container {
+    border: 1px solid var(--color-line);
+    background-color: #252526;
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+#reaction-chart {
+    position: relative;
+    height: 300px; /* グラフの高さ */
+    width: 100%;
+    border-left: 2px solid var(--color-line); /* Y軸 */
+    border-bottom: 2px solid var(--color-line); /* X軸 */
+    margin: 20px 0;
+    overflow: hidden; /* 枠からはみ出さないように */
+}
+
+/* グラフの曲線 (CSSだけで描画) */
+.chart-curve {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* グラデーションで反応の強さを表現 */
+    background: linear-gradient(90deg, transparent 0%, transparent 50%, rgba(255, 140, 0, 0.2) 60%, rgba(255, 140, 0, 0.8) 100%);
+}
+
+/* 曲線の線そのものを擬似要素で描く */
+.chart-curve::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 0 0; 
+    /* ベジェ曲線のようなカーブをborder-radiusで簡易再現するのは難しいので、
+       今回はclip-pathを使わず、シンプルな急上昇カーブを表現するテクニックを使います */
+    border-top: 5px solid var(--color-accent);
+    /* 大きな円の右下部分を使って急上昇カーブに見せる */
+    width: 200%; 
+    height: 200%;
+    border-radius: 100%;
+    transform: translate(-50%, 50%); 
+}
+
+/* X軸のラベル */
+.chart-labels {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    font-family: monospace;
+    color: #888;
+    font-size: 0.8rem;
+    margin-top: -15px; /* 軸に近づける */
+}
+
+.caption {
+    font-size: 0.8rem;
+    color: #aaa;
+    text-align: right;
+    margin-top: 10px;
+}
+
+/* --- テーブルの設定 --- */
+.table-container {
+    overflow-x: auto; /* スマホではみ出さないように */
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+th, td {
+    border: 1px solid var(--color-line);
+    padding: 12px;
+    text-align: left;
+}
+th {
+    background-color: #333;
+    color: var(--color-accent);
+}
+td strong {
+    color: #fff; /* テーブル内の強調文字は白 */
+}
+
+/* 参考文献 */
+.references {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-line);
+    font-size: 0.8rem;
+    color: #888;
+}
+.references h3 {
+    margin-top: 0;
+    font-size: 1rem;
+    color: #888;
+}
