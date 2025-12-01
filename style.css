@@ -1290,3 +1290,155 @@ body:has(.article-id:contains('Exp.05')) .article-header {
     color: #F2F2F2;
     text-shadow: 0 4px 20px rgba(0,0,0,0.8);
 }
+
+/* --- Article 07: Starch Specific Styles --- */
+
+/* 澱粉粒の膨潤図解 */
+.starch-diagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 10px;
+    margin: 40px 0;
+    border: 1px dashed var(--color-line);
+    background: rgba(255,255,255,0.02);
+    flex-wrap: wrap;
+}
+
+.starch-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.starch-granule {
+    border: 2px solid #E0E0E0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 0.3s;
+}
+
+/* 1. 生の状態 (Raw): 小さく硬い */
+.starch-granule.raw {
+    width: 50px; height: 50px;
+    background: #222;
+}
+
+/* 2. 膨潤 (Swelling): 水を吸って巨大化 */
+.starch-granule.swelling {
+    width: 80px; height: 80px;
+    background: radial-gradient(circle, #444 30%, #222 100%);
+    border-color: #FFD54F; /* 活性化 */
+}
+
+/* 3. 糊化 (Gel): 崩壊してアミロース溶出 */
+.starch-granule.gelatinized {
+    width: 90px; height: 90px;
+    background: rgba(255, 213, 79, 0.2); /* ゲル状 */
+    border: 2px dashed #FFD54F;
+    box-shadow: 0 0 15px rgba(255, 213, 79, 0.3);
+}
+
+/* 溶出したアミロース（ひも状） */
+.leaked-amylose {
+    position: absolute;
+    width: 120%; height: 120%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    animation: wobble 4s infinite linear;
+}
+@keyframes wobble {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.granule-label {
+    font-family: var(--font-mono); font-size: 0.7rem; color: #fff;
+    z-index: 2;
+}
+
+
+/* 老化速度グラフ (4℃ピーク) */
+.curve-retrogradation {
+    background: none;
+}
+.curve-retrogradation::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 100%; height: 100%;
+    /* 4度付近で山なりになるカーブ */
+    background: linear-gradient(to right, transparent 0%, transparent 20%, rgba(79, 195, 247, 0.8) 35%, transparent 60%);
+    /* 擬似的な山の線 */
+    border-top: 2px solid #4FC3F7;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    transform: scaleX(0.5) translateX(30%); /* 位置調整：4℃付近をピークに */
+    box-shadow: 0 -5px 15px rgba(79, 195, 247, 0.3);
+}
+
+.peak-zone {
+    position: absolute;
+    left: 30%; top: 20%;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: #4FC3F7;
+    text-align: center;
+    border-bottom: 1px solid #4FC3F7;
+}
+
+/* 記事ヘッダー背景（個別設定） */
+/*
+.header-starch {
+    background-image: url('starch-bg.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 100px 40px;
+    border-bottom: none;
+    z-index: 1;
+}
+.header-starch::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(15, 15, 16, 0.7);
+    z-index: -1;
+}
+.header-starch .article-main-title, .header-starch .lead {
+    color: #F2F2F2;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+}
+
+/* --- 記事ヘッダー背景設定 (Article 07) --- */
+
+/* 記事ごとに背景を変えるための個別設定 */
+/* HTML側でクラスを追加する必要があります */
+
+.header-starch {
+    background-image: url('starch-bg.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 100px 40px;
+    border-bottom: none;
+    z-index: 1;
+}
+
+.header-starch::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(15, 15, 16, 0.7); /* 文字を見やすくするフィルター */
+    z-index: -1;
+}
+
+.header-starch .article-main-title,
+.header-starch .lead {
+    color: #F2F2F2;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+}

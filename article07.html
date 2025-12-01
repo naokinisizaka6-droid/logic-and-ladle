@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>澱粉の糊化と老化 - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- ファビコン -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+    <!-- ヘッダー -->
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <!-- 記事コンテンツ -->
+    <main class="article-container">
+        <article>
+            <div class="article-header header-starch">
+                <span class="article-id">Exp.07</span>
+                <span class="category-tag">Carbohydrate / Starch</span>
+                <h1 class="article-main-title">澱粉の糊化と老化：<br>米とパスタの物理学</h1>
+                <p class="lead">
+                    炊きたてのご飯はなぜ甘く、冷えたご飯はなぜ硬いのか。<br>
+                    それは澱粉（スターチ）の結晶構造が、熱と水によって劇的に変化するからだ。<br>
+                    「糊化（Gelatinization）」と「老化（Retrogradation）」を支配し、炭水化物の食感を設計する。
+                </p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：人類とデンプン</h2>
+                <p>
+                    農耕革命以来、人類のカロリー源は「澱粉」が支えてきた。
+                    米、小麦、トウモロコシ、芋。これらはすべて、植物が光合成で作り出したブドウ糖のポリマー（重合体）である。
+                    生の状態では消化できないほど硬い結晶だが、水と熱を加えることで、我々が「美味しい」と感じる柔らかい構造へと変化する。
+                </p>
+            </section>
+
+            <section>
+                <h2>2.0 基礎原理：アミロースとアミロペクチン</h2>
+                <p>
+                    澱粉には2種類の分子構造がある。この比率が食感を決定づける。
+                </p>
+                <ul>
+                    <li><strong>アミロース (Amylose):</strong> 直鎖状の分子。硬さやパラパラ感を生む。（例：タイ米、高アミロース米）</li>
+                    <li><strong>アミロペクチン (Amylopectin):</strong> 枝分かれした分子。粘りやモチモチ感を生む。（例：もち米は100%これ）</li>
+                </ul>
+
+                <h3>2.1 糊化 (Gelatinization) のメカニズム</h3>
+                <p>
+                    生の澱粉粒（βデンプン）は、水を含んで加熱されると、以下のプロセスを経て「糊（のり）」状になる。これを糊化（α化）と呼ぶ。
+                </p>
+
+                <!-- 澱粉膨潤図解 -->
+                <div class="reaction-diagram-box starch-diagram">
+                    <div class="starch-step">
+                        <div class="starch-granule raw">
+                            <span class="granule-label">Raw</span>
+                        </div>
+                        <span class="molecule-desc">吸水・膨潤<br>(60°C〜)</span>
+                    </div>
+                    <div class="operator">→</div>
+                    <div class="starch-step">
+                        <div class="starch-granule swelling">
+                            <span class="granule-label">Swelling</span>
+                        </div>
+                        <span class="molecule-desc">崩壊・溶出<br>(90°C〜)</span>
+                    </div>
+                    <div class="operator">→</div>
+                    <div class="starch-step">
+                        <div class="starch-granule gelatinized">
+                            <div class="leaked-amylose"></div>
+                            <span class="granule-label">Gel</span>
+                        </div>
+                        <span class="molecule-desc">糊化完了<br>(粘性発現)</span>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>3.0 データ：「4℃」の罠（老化）</h2>
+                <p>
+                    一度糊化した澱粉も、冷えると再び結晶化し、水を吐き出して硬くなる。これを<strong>「老化 (Retrogradation / β化)」</strong>と呼ぶ。
+                    ボソボソになった冷やご飯の状態だ。
+                </p>
+                <p>
+                    重要なのは、老化が最も進みやすい温度帯があることだ。
+                    それは氷点下ではなく、<strong>冷蔵庫の温度（0℃〜4℃）</strong>である。
+                </p>
+
+                <!-- 老化速度グラフ -->
+                <div class="visualization-container">
+                    <h3>Starch Retrogradation Rate vs Temperature</h3>
+                    <div id="reaction-chart">
+                        <div class="chart-curve curve-retrogradation"></div>
+                        <div class="chart-labels">
+                            <span>-20°C (Frozen)</span>
+                            <span>4°C (Fridge)</span>
+                            <span>20°C (Room)</span>
+                            <span>60°C (Hot)</span>
+                        </div>
+                        <!-- ピーク表示 -->
+                        <div class="peak-zone">MAX RATE<br>(4°C)</div>
+                    </div>
+                    <p class="caption">※老化（硬化）速度は4℃付近で最大となる。急速冷凍（-18℃以下）するか、保温（60℃以上）することで老化は防げる。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：澱粉の制御術</h2>
+                <p>
+                    糊化と老化の特性を理解すれば、目的に応じて使い分けることができる。
+                </p>
+
+                <h3>Protocol A: リゾットの「マンテカトゥーラ (Mantecatura)」</h3>
+                <p>
+                    イタリアンのリゾットにおいて、最後にバターとチーズを加えて激しく混ぜる工程。これは単なる味付けではない。
+                </p>
+                <ul>
+                    <li><strong>Theory:</strong> 米から溶出したアミロース（糊）と、バターの油脂を<strong>乳化（Emulsification）</strong>させる工程だ。</li>
+                    <li><strong>Action:</strong> 米は洗わずに使う（表面の澱粉を保持するため）。アルデンテに煮えたら火を止め、冷たいバターを加え、空気を含ませるように波打たせて混ぜる。米から出た澱粉の粘り気が、水と油を繋ぎ止め、クリームのようなソースを作り出す。</li>
+                </ul>
+
+                <h3>Protocol B: チャーハンに「冷や飯」を使う理由</h3>
+                <p>
+                    パラパラのチャーハンを作るのに、炊きたてのご飯が不向きなのはなぜか？
+                </p>
+                <ul>
+                    <li><strong>Theory:</strong> 炊きたては表面が粘着質（糊化状態）で、米同士がくっつきやすい。一方、一度冷えたご飯は表面が<strong>「老化」</strong>し、再結晶化して硬くなっている。</li>
+                    <li><strong>Action:</strong> 冷蔵庫で一晩置いたご飯（老化状態）を使う。表面がコーティングされたかのように硬いため、油と卵が馴染みやすく、物理的にくっつきにくい。加熱すれば内部だけが再糊化し、「外パラパラ・中ふっくら」が実現する。</li>
+                </ul>
+
+                <h3>Protocol C: パスタのアルデンテ維持</h3>
+                <p>
+                    アルデンテとは、中心部にわずかに「糊化していない芯（Raw Starch）」が残っている状態だ。
+                </p>
+                <ul>
+                    <li><strong>Action:</strong> 茹で上げた直後にソースと合わせるが、その際も予熱で糊化は進行する。提供までのタイムラグを計算し、わずかに早めに引き上げる。酸性のソース（トマトなど）は澱粉の加水分解を遅らせるため、比較的コシが長持ちする。</li>
+                </ul>
+            </section>
+
+            <div class="references">
+                <h3>References</h3>
+                <ul>
+                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner. pp.457-461 (Starch).</li>
+                    <li>[2] Whistler, R. L., & BeMiller, J. N. (1997). <em>Carbohydrate Chemistry for Food Scientists</em>.</li>
+                    <li>[3] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. Vol.4.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

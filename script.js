@@ -7,9 +7,9 @@ const articles = [
     { id: "Exp.04", category: "INGREDIENT", title: "コラーゲンの熱分解とゼラチン化", date: "2025.12.19", link: "article04.html" },
     { id: "Exp.05", category: "PHYSICS", title: "浸透圧と拡散係数：塩の物理学", date: "2025.12.26", link: "article05.html" },
     { id: "Exp.06", category: "INGREDIENT", title: "卵の熱凝固ヒステリシス", date: "2026.01.08", link: "article06.html" },
+    { id: "Exp.07", category: "INGREDIENT", title: "澱粉の糊化と老化のメカニズム", date: "2026.01.15", link: "article07.html" },
 
     // --- 以下、企画・執筆待ち記事 --- 
-    { id: "Exp.07", category: "INGREDIENT", title: "澱粉の糊化と老化のメカニズム", date: "Coming Soon", link: "#" },
     { id: "Exp.08", category: "INGREDIENT", title: "油脂の酸化と発煙点管理", date: "Coming Soon", link: "#" },
     { id: "Exp.09", category: "SENSORY", title: "揮発性香気成分の抽出理論", date: "Coming Soon", link: "#" },
     { id: "Exp.10", category: "PHYSICS", title: "熱伝導・対流・放射の最適解", date: "Coming Soon", link: "#" },
