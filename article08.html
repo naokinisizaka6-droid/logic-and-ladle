@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>油脂の酸化と発煙点 - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- ファビコン -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+    <!-- ヘッダー -->
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <!-- 記事コンテンツ -->
+    <main class="article-container">
+        <article>
+            <div class="article-header header-oil">
+                <span class="article-id">Exp.08</span>
+                <span class="category-tag">Lipid / Fat</span>
+                <h1 class="article-main-title">油脂の酸化と発煙点：<br>劣化を防ぐフライヤー管理術</h1>
+                <p class="lead">
+                    「油が疲れる」とは、感覚的な言葉ではない。<br>
+                    それは加水分解と酸化重合による、明確な化学的劣化プロセスだ。<br>
+                    発煙点（Smoke Point）の低下を指標に、揚げ油の寿命を最大化するロジック。
+                </p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：油の寿命を決めるもの</h2>
+                <p>
+                    揚げ物は、食材の水分を瞬時に蒸発させ、空いたスペースに油が入り込む「置換現象」である。
+                    この過程で、油は高温、水分、空気（酸素）という過酷な環境に晒され続ける。
+                    劣化した油は、粘りが出て切れが悪くなり、不快な臭い（アルデヒド類）を放ち、最悪の場合、胸焼けの原因となる有害物質を生成する。
+                </p>
+            </section>
+
+            <section>
+                <h2>2.0 基礎原理：劣化のトライアングル</h2>
+                <p>
+                    油（トリグリセリド）の劣化は、主に以下の3つの反応が複合的に進むことで起こる。
+                </p>
+
+                <!-- 油脂劣化のメカニズム図解 -->
+                <div class="reaction-diagram-box oil-degradation">
+                    <div class="degradation-step">
+                        <div class="fat-molecule trig">Triglyceride</div>
+                        <span class="step-desc">新鮮な油</span>
+                    </div>
+                    <div class="operator arrow-right">
+                        <span class="heat-label">H₂O + Heat</span>
+                        →
+                    </div>
+                    <div class="degradation-step">
+                        <div class="fat-molecule ffa">FFA + Glycerol</div>
+                        <span class="step-desc">加水分解<br>(遊離脂肪酸)</span>
+                    </div>
+                    <div class="operator arrow-right">
+                        <span class="heat-label">O₂ + Heat</span>
+                        →
+                    </div>
+                    <div class="degradation-step">
+                        <div class="fat-molecule polymer">Polymer</div>
+                        <span class="step-desc">酸化重合<br>(粘り・着色)</span>
+                    </div>
+                </div>
+
+                <ul>
+                    <li><strong>加水分解 (Hydrolysis):</strong> 食材の水分により、トリグリセリドが「遊離脂肪酸 (FFA)」とグリセリンに分解される。これが<strong>発煙点低下</strong>の主因となる。</li>
+                    <li><strong>酸化 (Oxidation):</strong> 空気中の酸素と結合し、過酸化脂質を生成。これが分解して不快臭（戻り臭）となる。</li>
+                    <li><strong>熱重合 (Polymerization):</strong> 分子同士が結合して高分子化し、油に「粘り」と「色」が出る。油切れが悪くなる原因。</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3.0 データ：発煙点 (Smoke Point) の低下</h2>
+                <p>
+                    油の鮮度を見極める最も簡単な物理指標は「煙が出る温度」だ。
+                    新鮮な油は230℃以上でも煙が出ないが、劣化して遊離脂肪酸が増えるにつれ、発煙点は劇的に低下する。
+                    180℃（揚げ適温）で煙が出始めたら、その油は寿命である。
+                </p>
+
+                <!-- 発煙点低下グラフ -->
+                <div class="visualization-container">
+                    <h3>Degradation vs Smoke Point</h3>
+                    <div id="reaction-chart">
+                        <div class="chart-curve curve-smoke-point"></div>
+                        <div class="chart-labels">
+                            <span>Fresh (0h)</span>
+                            <span>Used (10h)</span>
+                            <span>Degraded (20h)</span>
+                            <span>Toxic (30h+)</span>
+                        </div>
+                        <!-- 揚げ適温ライン -->
+                        <div class="fry-temp-line">Target: 180°C</div>
+                    </div>
+                    <p class="caption">※使用時間と共に発煙点は低下する。グラフが180℃を下回ると、調理中に煙が発生し、引火リスクも高まる。</p>
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>油脂の種類</th>
+                                <th>発煙点 (新鮮時)</th>
+                                <th>特徴</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>米油 (Rice Bran)</strong></td>
+                                <td>250°C</td>
+                                <td>酸化に強く、劣化臭が少ない最強の揚げ油。</td>
+                            </tr>
+                            <tr>
+                                <td><strong>キャノーラ油</strong></td>
+                                <td>240°C</td>
+                                <td>バランスが良いが、熱安定性は米油に劣る。</td>
+                            </tr>
+                            <tr>
+                                <td><strong>オリーブ (Virgin)</strong></td>
+                                <td>160-190°C</td>
+                                <td>発煙点が低く、揚げ物には不向き（香りが飛ぶ）。</td>
+                            </tr>
+                            <tr>
+                                <td><strong>バター</strong></td>
+                                <td>150°C</td>
+                                <td>固形分（乳タンパク）が焦げるため、澄ましバターにする必要がある。</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：フライヤー管理術</h2>
+                <p>
+                    油の劣化を完全に止めることはできないが、遅らせることはできる。
+                </p>
+
+                <h3>Protocol A: 揚げカスの化学的除去</h3>
+                <p>
+                    揚げカスは単なるゴミではない。「炭化した有機物」であり、油の酸化触媒として機能してしまう。
+                </p>
+                <ul>
+                    <li><strong>Action:</strong> 営業終了後ではなく、<strong>営業中もこまめに</strong>網ですくうこと。微細なカスは、油が冷める前にオイルポットのフィルター（活性炭入りがベスト）で濾過する。</li>
+                </ul>
+
+                <h3>Protocol B: 差し油 (Replenishment) の効果</h3>
+                <p>
+                    減った分だけ新しい油を足す行為は、単なる補充以上の意味がある。
+                </p>
+                <ul>
+                    <li><strong>Theory:</strong> 新しい油には、劣化を抑制する成分（トコフェロール等）が含まれている。また、全体の極性化合物量（TPM）を希釈し、発煙点を回復させる効果がある。</li>
+                    <li><strong>Rule:</strong> 毎日、フライヤー容量の<strong>10〜15%</strong>を新油に入れ替えるサイクルを作れば、油の寿命は2倍以上に延びる。</li>
+                </ul>
+
+                <h3>Protocol C: 表面積の制御</h3>
+                <p>
+                    酸化は空気との接触面で起こる。
+                </p>
+                <ul>
+                    <li><strong>Action:</strong> 使用していない時は必ず<strong>蓋</strong>をする。フライヤーのスイッチを切った直後が高温で最も酸化しやすい。冷めるのを待たずに蓋をすることで、酸素供給を遮断する。</li>
+                </ul>
+            </section>
+
+            <div class="references">
+                <h3>References</h3>
+                <ul>
+                    <li>[1] Gupta, M. K. (2017). <em>Practical Guide to Vegetable Oil Processing</em>. AOCS Press.</li>
+                    <li>[2] Blumenthal, M. M. (1991). <em>A new look at the chemistry and physics of deep-fat frying</em>. Food Technology.</li>
+                    <li>[3] Choe, E., & Min, D. B. (2007). <em>Chemistry of deep-fat frying oils</em>. Journal of Food Science.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

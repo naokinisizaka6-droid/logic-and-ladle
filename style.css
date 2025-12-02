@@ -1442,3 +1442,133 @@ body:has(.article-id:contains('Exp.05')) .article-header {
     color: #F2F2F2;
     text-shadow: 0 4px 20px rgba(0,0,0,0.8);
 }
+
+/* --- Article 08: Oil & Fat Specific Styles --- */
+
+/* 油脂劣化メカニズム図解 */
+.oil-degradation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 10px;
+    margin: 40px 0;
+    border: 1px dashed var(--color-line);
+    background: rgba(255,255,255,0.02);
+    flex-wrap: wrap;
+}
+
+.degradation-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.fat-molecule {
+    width: 80px; height: 80px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-mono); font-size: 0.7rem; color: #000;
+    border-radius: 4px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* 1. トリグリセリド (正常): 黄色 */
+.trig {
+    background: #FFD54F;
+    border: 2px solid #FFC107;
+}
+
+/* 2. 遊離脂肪酸 (分解): オレンジ */
+.ffa {
+    background: #FFB74D;
+    border: 2px dashed #FF9800;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 50% 100%, 0% 70%); /* 不安定な形 */
+}
+
+/* 3. 重合物 (劣化): 茶色 */
+.polymer {
+    background: #8D6E63;
+    border: 2px solid #5D4037;
+    border-radius: 50%; /* 塊 */
+}
+
+.step-desc {
+    font-size: 0.7rem; color: var(--color-sub); text-align: center;
+}
+
+
+/* 発煙点低下グラフ (右肩下がり) */
+.curve-smoke-point {
+    background: none;
+}
+.curve-smoke-point::after {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    /* 右肩下がりのカーブ */
+    border-top: 3px solid #FF9800;
+    border-radius: 0 100% 0 0 / 0 100% 0 0; /* 1/4円弧の逆 */
+    transform: scaleX(1.5) rotate(15deg) translate(0, 20%);
+    box-shadow: 0 -5px 15px rgba(255, 152, 0, 0.3);
+}
+
+.fry-temp-line {
+    position: absolute;
+    left: 0; right: 0; top: 60%; /* 180度の位置 */
+    border-top: 1px dashed #E57373;
+    color: #E57373;
+    font-family: var(--font-mono); font-size: 0.7rem;
+    padding-left: 10px;
+}
+
+/* 記事ヘッダー背景（個別設定） */
+/*
+.header-oil {
+    background-image: url('oil-bg.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 100px 40px;
+    border-bottom: none;
+    z-index: 1;
+}
+.header-oil::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(15, 15, 16, 0.7);
+    z-index: -1;
+}
+.header-oil .article-main-title, .header-oil .lead {
+    color: #F2F2F2;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+}
+*/
+
+/* --- Article 08 Header --- */
+.header-oil {
+    background-image: url('oil-bg.png'); /* ここがファイル名と一致していること */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 100px 40px;
+    border-bottom: none;
+    z-index: 1;
+}
+
+.header-oil::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(15, 15, 16, 0.7);
+    z-index: -1;
+}
+
+.header-oil .article-main-title,
+.header-oil .lead {
+    color: #F2F2F2;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+}
