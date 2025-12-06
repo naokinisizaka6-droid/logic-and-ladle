@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+                                                                                                                                <html lang="ja">
+                                                                                                                                    <head>
+                                                                                                                                        <meta charset="UTF-8">
+                                                                                                                                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                                                                                                                                <title>電子レンジの誘電加熱 (Dielectric Heating)： マイクロ波が「内側から」温める嘘と真実 - LOGIC & LADLE</title>
+                                                                                                                                                <link rel="stylesheet" href="style.css">
+
+                                                                                                                                                    <link rel="preconnect" href="https://fonts.googleapis.com">
+                                                                                                                                                        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                                                                                                                                                            <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+
+                                                                                                                                                                <link rel="icon" href="favicon.svg" type="image/svg+xml">
+                                                                                                                                                                </head>
+                                                                                                                                                                <body>
+                                                                                                                                                                    <header>
+                                                                                                                                                                        <div class="logo-area">
+                                                                                                                                                                            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+                                                                                                                                                                            <p class="site-desc">Experimental Food Science Lab.</p>
+                                                                                                                                                                        </div>
+                                                                                                                                                                        <nav class="site-nav">
+                                                                                                                                                                            <a href="index.html">TOP</a>
+                                                                                                                                                                            <a href="#">About</a>
+                                                                                                                                                                        </nav>
+                                                                                                                                                                    </header>
+
+                                                                                                                                                                    <main class="article-container">
+                                                                                                                                                                        <article>
+                                                                                                                                                                            <div class="article-header header-micro">
+                                                                                                                                                                                <span class="article-id">Exp.20</span>
+                                                                                                                                                                                <span class="category-tag">Physics / Tool</span>
+                                                                                                                                                                                <h1 class="article-main-title">電子レンジの誘電加熱 (Dielectric Heating)：<br>マイクロ波が「内側から」温める嘘と真実</h1>
+                                                                                                                                                                                <p class="lead">
+                                                                                                                                                                                    「レンジは手抜き」という偏見を捨てよ。<br>水分子を振動させ、食材そのものを発熱体に変える唯一の加熱法。<br>マイクロ波の物理特性を知れば、レンジは最強の調理器具になる。
+                                                                                                                                                                                </p>
+                                                                                                                                                                            </div>
+
+                                                                                                                                                                            <section>
+                                                                                                                                                                                <h2>1.0 序論：外からか、内からか</h2>
+                                                                                                                                                                                <p>
+                                                                                                                                                                                    オーブンやフライパンは「外部加熱（伝導・対流）」であり、熱は外から中へ徐々に伝わる。<br>電子レンジは「内部発熱（誘電加熱）」であり、電波が届く範囲であれば、内部の水分子が一斉に発熱する。
+                                                                                                                                                                                </p>
+                                                                                                                                                                            </section>
+
+                                                                                                                                                                            <section>
+                                                                                                                                                                                <h2>2.0 加熱モデル：双極子回転</h2>
+                                                                                                                                                                                <p>
+                                                                                                                                                                                    マイクロ波（2.45GHz）は、水分子のプラスとマイナスの極を激しく反転させる。<br>水分子同士が摩擦を起こし、熱エネルギーが発生する。したがって、水分を含まない皿や乾燥した食品は温まらない。
+                                                                                                                                                                                </p>
+
+                                                                                                                                                                                
+                                                                                                                            <div class="diagram-placeholder">
+                                                                                                                                <div class="diagram-title">[Microwave Dipole Rotation]</div>
+                                                                                                                                <div>Microwave Field (+ / -) switches billions of times/sec</div>
+                                                                                                                                <div>Water Molecules (H2O) rotate to align</div>
+                                                                                                                                <div>Friction -> HEAT</div>
+                                                                                                                            </div>
+                                                                                                                            
+
+                                                                                                                                                                            </section>
+
+                                                                                                                                                                            <section>
+                                                                                                                                                                                <h2>3.0 制御理論：浸透深度と定在波</h2>
+                                                                                                                                                                                <p>
+                                                                                                                                                                                    「内側から温まる」と言われるが、マイクロ波にも「浸透できる深さ」の限界がある。<br>また、庫内で電波が強め合う場所と弱め合う場所（定在波）ができ、これも加熱ムラの原因となる。
+                                                                                                                                                                                </p>
+
+                                                                                                                                                                                
+                                                                                                                                <div class="visualization-container">
+                                                                                                                                    <h3>Heating Speed: Pure Water vs Salt Water</h3>
+                                                                                                                                    <div style="height:200px; border-left:2px solid #555; border-bottom:2px solid #555; position:relative;">
+                                                                                                                                        <!-- Salt Water (Faster/Surface) -->
+                                                                                                                                        <div style="position:absolute; bottom:0; left:0; width:100%; height:100%; border-top:2px dashed #E57373; transform: skewY(-40deg); transform-origin:bottom left;"></div>
+                                                                                                                                        <!-- Pure Water -->
+                                                                                                                                        <div style="position:absolute; bottom:0; left:0; width:100%; height:100%; border-top:2px solid #4FC3F7; transform: skewY(-20deg); transform-origin:bottom left;"></div>
+                                                                                                                                        <div style="position:absolute; right:10px; top:20px; color:#E57373;">Salt Water</div>
+                                                                                                                                        <div style="position:absolute; right:10px; top:60px; color:#4FC3F7;">Pure Water</div>
+                                                                                                                                        <div style="position:absolute; bottom:-20px; left:50%;">Time</div>
+                                                                                                                                    </div>
+                                                                                                                                </div>
+                                                                                                                                
+
+                                                                                                                                                                            </section>
+
+                                                                                                                                                                            <section>
+                                                                                                                                                                                <h2>4.0 LABORATORY PROTOCOLS：実践メソッド</h2>
+                                                                                                                                                                                
+                                                                                                                                                                                <h3>Protocol A: 塩分とスピード</h3>
+                                                                                                                                                                                <p>
+                                                                                                                                                                                    塩はイオンを含み電波を吸収しやすいため、塩気のある部分は異常に早く熱くなる。温め直しで「外は熱々、中は冷たい」現象の一因。
+                                                                                                                                                                                </p>
+                                                                                                                                                                                
+                                                                                                                                                                                <h3>Protocol B: 爆発防止</h3>
+                                                                                                                                                                                <p>
+                                                                                                                                                                                    卵やタラコなど膜に包まれた食材は、内部で発生した水蒸気の逃げ場がなくなり爆発する。必ず穴を開ける。
+                                                                                                                                                                                </p>
+                                                                                                                                                                                
+                                                                                                                                                                                <h3>Protocol C: 600W vs 200W</h3>
+                                                                                                                                                                                <p>
+                                                                                                                                                                                    強いワット数は加熱ムラを生みやすい。解凍や煮込みには低ワット数を使い、熱伝導による均一化（休ませる時間）を計算に入れる。
+                                                                                                                                                                                </p>
+                                                                                                                                                                                
+                                                                                                                                                                            </section>
+
+                                                                                                                                                                            <div class="references">
+                                                                                                                                                                                <h3>References & Further Reading</h3>
+                                                                                                                                                                                <ul>
+                                                                                                                                                                                    <li>[1] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                                                                                                                                                                                    <li>[2] Myhrvold, Nathan. (2011). <em>Modernist Cuisine</em>. The Cooking Lab.</li>
+                                                                                                                                                                                </ul>
+                                                                                                                                                                            </div>
+                                                                                                                                                                        </article>
+                                                                                                                                                                    </main>
+
+                                                                                                                                                                    <footer>
+                                                                                                                                                                        <div class="footer-content">
+                                                                                                                                                                            <div class="footer-logo">LOGIC & LADLE</div>
+                                                                                                                                                                            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+                                                                                                                                                                        </div>
+                                                                                                                                                                    </footer>
+                                                                                                                                                                </body>
+                                                                                                                                                            </html>
+                                                                                                                                                            
