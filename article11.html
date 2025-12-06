@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>酵素的褐変の抑制：リンゴやアボカドが黒くなるのを防ぐ生化学 - LOGIC & LADLE</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Roboto+Mono:wght@300;400&family=Shippori+Mincho+B1:wght@500;700&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <a href="index.html" class="site-logo">LOGIC & LADLE</a>
+            <p class="site-desc">Experimental Food Science Lab.</p>
+        </div>
+        <nav class="site-nav">
+            <a href="index.html">TOP</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <article>
+            <div class="article-header header-preservation">
+                <span class="article-id">Exp.11</span>
+                <span class="category-tag">Preservation</span>
+                <h1 class="article-main-title">酵素的褐変の抑制：<br>リンゴやアボカドが黒くなるのを防ぐ生化学</h1>
+                <p class="lead">
+                    サラダに添えたアボカド、デザートのリンゴ。<br>
+                    ほんの数分目を離した隙に、鮮やかな色は失われ、不快な褐色へと変化する。<br>
+                    植物が持つ「自己防衛機能」としての酵素反応を理解し、それを停止させる化学的制御法を習得する。
+                </p>
+            </div>
+
+            <section>
+                <h2>1.0 序論：なぜ植物は黒くなるのか？</h2>
+                <p>
+                    この現象の正体は、<strong>ポリフェノールオキシダーゼ（PPO）</strong>と呼ばれる酵素の働きによるものである。<br>
+                    植物にとってPPOは、虫や動物にかじられた時（細胞が破壊された時）、傷口を酸化させて修復し、抗菌物質（キノン類）を生成すると同時に、苦味物質を作って捕食者を撃退するための防御システムだ。<br>
+                    我々料理人にとって、この防御システムは「見た目と味の劣化」でしかない。
+                </p>
+            </section>
+
+            <section>
+                <h2>2.0 酵素反応モデル：鍵と鍵穴</h2>
+                <p>
+                    酵素は特定の物質（基質）とだけ結合し、化学反応を促進する。これを「鍵と鍵穴のモデル」と呼ぶ。<br>
+                    PPO（鍵穴）は、フェノール類（鍵）と酸素が存在する環境下でのみ反応する。
+                </p>
+
+                <div class="lock-key-model">
+                    <div class="molecule-step">
+                        <div class="substrate-shape">Phenol</div>
+                        <span class="molecule-desc">基質</span>
+                    </div>
+                    <div class="operator">+</div>
+                    <div class="molecule-step">
+                        <div class="enzyme-shape">PPO</div>
+                        <span class="molecule-desc">酵素</span>
+                    </div>
+                    <div class="operator">+</div>
+                    <div class="molecule-step">
+                        <div class="molecule" style="border-radius:50%; width:40px; height:40px; border:2px dashed #ccc;">O2</div>
+                        <span class="molecule-desc">酸素</span>
+                    </div>
+                    <div class="operator arrow-right">→</div>
+                    <div class="molecule-step">
+                        <div class="molecule" style="background:#555; color:#ccc; border:none;">Melanin</div>
+                        <span class="molecule-desc">褐色色素</span>
+                    </div>
+                </div>
+
+                <p>
+                    つまり、この3つの要素（基質・酵素・酸素）のうちの<strong>どれか1つでも遮断すれば、褐変は止まる</strong>。<br>
+                    基質（フェノール）を取り除くことは不可能なので、我々が制御できるのは「酵素」か「酸素」のどちらかである。
+                </p>
+            </section>
+
+            <section>
+                <h2>3.0 制御理論：pH、温度、塩分</h2>
+                <p>
+                    最も効果的なのは酵素PPOそのものを働かなくさせることだ。<br>
+                    酵素はタンパク質であり、特定のpHや温度環境下でしか機能しない（至適pH、至適温度）。
+                </p>
+
+                <div class="visualization-container">
+                    <h3>Enzyme Activity vs pH Level</h3>
+                    <div id="ph-enzyme-chart">
+                        <div class="bell-curve"></div>
+                        <div class="chart-labels">
+                            <span style="position:absolute; left:0; bottom:-20px;">Acidic (pH 2)</span>
+                            <span style="position:absolute; left:45%; bottom:-20px;">Neutral (pH 7)</span>
+                            <span style="position:absolute; right:0; bottom:-20px;">Alkaline (pH 10)</span>
+                            <span style="position:absolute; top:10px; right:10px; color:var(--color-accent);">Optimal Activity</span>
+                        </div>
+                    </div>
+                    <p class="caption">※pHが酸性側（pH 3以下）に傾くと、酵素活性はほぼゼロになる。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4.0 LABORATORY PROTOCOLS：褐変防止メソッド比較</h2>
+                <p>
+                    現場で使われるいくつかの手法を科学的に比較する。
+                </p>
+
+                <h3>Protocol A: 塩水 (Salt Water)</h3>
+                <ul>
+                    <li><strong>Mechanism:</strong> 塩化物イオン（Cl-）が酵素の活性部位の銅イオンと結合し、阻害剤として働く。ただし完全な失活ではない。</li>
+                    <li><strong>Evaluation:</strong> 効果は高いが、食材がしょっぱくなる欠点がある。濃度1%程度が限界。</li>
+                </ul>
+
+                <h3>Protocol B: レモン汁 / 酢 (Acid)</h3>
+                <ul>
+                    <li><strong>Mechanism:</strong> pHを下げて酵素を変性させる（pH3以下を目指す）。</li>
+                    <li><strong>Evaluation:</strong> 最も強力。ただし酸味がつく。アボカドには非常によく合うが、桃などの繊細な果物には注意が必要。</li>
+                </ul>
+
+                <h3>Protocol C: アスコルビン酸 (Vitamin C)</h3>
+                <ul>
+                    <li><strong>Mechanism:</strong> 「還元剤」として働く。酵素によって酸化された物質（キノン）を、再び元のフェノールに戻す（時間を巻き戻すような作用）。さらに酸素自体を消費する。</li>
+                    <li><strong>Evaluation:</strong> 味への影響が最も少ないプロフェッショナルな解。薬局や製菓材料店で粉末が入手可能。</li>
+                </ul>
+                
+                <div class="callout">
+                    <strong>PRO TIP: 真空パック (Vacuum Packing)</strong>
+                    物理的に酸素を遮断する最強の方法。空気がなければ酸化は起きない。<br>
+                    アボカドのペーストなどは、レモン汁を加えてから真空パックすることで、数日間鮮やかな緑色を維持できる。
+                </div>
+            </section>
+
+            <div class="references">
+                <h3>References & Further Reading</h3>
+                <ul>
+                    <li>[1] Vamos-Vigyazo, L. (1981). <em>Polyphenol oxidase and peroxidase in fruits and vegetables</em>. CRC Critical Reviews in Food Science and Nutrition.</li>
+                    <li>[2] McGee, Harold. (2004). <em>On Food and Cooking</em>. Scribner.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">LOGIC & LADLE</div>
+            <div class="footer-copy">&copy; 2024 All Rights Reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>

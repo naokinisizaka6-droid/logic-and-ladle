@@ -13,7 +13,7 @@ const articles = [
     { id: "Exp.10", category: "PHYSICS", title: "熱伝導・対流・放射の最適解", date: "2026.02.05", link: "article10.html" },
 
     // --- 以下、企画・執筆待ち記事 --- 
-    { id: "Exp.11", category: "REACTION", title: "酵素的褐変の抑制生化学", date: "Coming Soon", link: "#" },
+    { id: "Exp.11", category: "REACTION", title: "酵素的褐変の抑制生化学", date: "2025.12.06", link: "article11.html" },
     { id: "Exp.12", category: "PHYSICS", title: "ペクチンのゲル化メカニズム", date: "Coming Soon", link: "#" },
     { id: "Exp.13", category: "REACTION", title: "乳酸発酵の制御と微生物学", date: "Coming Soon", link: "#" },
     { id: "Exp.14", category: "INGREDIENT", title: "死後硬直とATP分解：魚の熟成", date: "Coming Soon", link: "#" },
@@ -109,7 +109,7 @@ const gridContainer = document.getElementById('article-grid');
 const filterButtons = document.querySelectorAll('.filter-btn');
 
 function renderArticles(filter = 'ALL') {
-    if(!gridContainer) return;
+    if (!gridContainer) return;
     gridContainer.innerHTML = '';
     const filteredData = filter === 'ALL' ? articles : articles.filter(item => item.category === filter);
     let delayIndex = 0;
@@ -118,8 +118,8 @@ function renderArticles(filter = 'ALL') {
         const card = document.createElement('a');
         card.href = item.link;
         card.className = 'article-card';
-        
-        if(item.link === "#") {
+
+        if (item.link === "#") {
             card.classList.add('disabled');
             card.style.cursor = "default";
             card.removeAttribute('href');
@@ -144,11 +144,11 @@ function renderArticles(filter = 'ALL') {
     });
 }
 
-if(filterButtons){
+if (filterButtons) {
     filterButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             const activeBtn = document.querySelector('.filter-btn.active');
-            if(activeBtn) activeBtn.classList.remove('active');
+            if (activeBtn) activeBtn.classList.remove('active');
             btn.classList.add('active');
             renderArticles(btn.dataset.filter);
         });

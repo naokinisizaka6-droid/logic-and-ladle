@@ -797,7 +797,74 @@ body:has(.article-id:contains('Exp.02')) .article-header {
     border-left: 3px solid transparent; 
     transform: translate(-50%, 20%) rotate(20deg); /* 擬似的な下降カーブ */
     box-shadow: none;
-    
+}
+
+/* --- Article 11: Preservation Specific Styles --- */
+
+.header-preservation {
+    background-image: url('preservation-bg.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 100px 40px;
+    border-bottom: none;
+    z-index: 1;
+}
+.header-preservation::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(15, 15, 16, 0.7);
+    z-index: -1;
+}
+.header-preservation .article-main-title,
+.header-preservation .lead {
+    color: #F2F2F2;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+}
+
+/* 鍵と鍵穴モデル (Lock & Key) */
+.lock-key-model {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 30px;
+    border: 1px dashed var(--color-line);
+    background: rgba(255,255,255,0.02);
+}
+.enzyme-shape {
+    width: 60px; height: 60px;
+    background-color: var(--color-sub);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 60%, 30% 60%, 30% 40%, 0% 40%);
+    display: flex; align-items: center; justify-content: center;
+    color: #000; font-size: 0.6rem; font-weight: bold;
+}
+.substrate-shape {
+    width: 40px; height: 40px;
+    background-color: var(--color-accent);
+    clip-path: polygon(0% 40%, 30% 40%, 30% 60%, 0% 60%, 0% 100%, 100% 100%, 100% 0%, 0% 0%);
+    display: flex; align-items: center; justify-content: center;
+    color: #000; font-size: 0.6rem; font-weight: bold;
+}
+
+/* pH vs 酵素活性グラフ */
+#ph-enzyme-chart {
+    height: 250px;
+    border-left: 2px solid #666;
+    border-bottom: 2px solid #666;
+    position: relative;
+    margin: 20px 0;
+}
+.bell-curve {
+    position: absolute; bottom: 0; left: 10%; width: 80%; height: 90%;
+    border-top: 3px solid var(--color-accent);
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-radius: 50% / 100% 100% 0 0;
+    box-shadow: 0 -5px 15px rgba(212, 175, 55, 0.3);
+}
+
     /* ※CSSだけで正確な逆S字を描くのは難しいため、
        ここでは簡易的に「右肩下がりの赤いライン」として表現しています。
        より正確にはSVG推奨ですが、トンマナとしてはこれで機能します */
