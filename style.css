@@ -5,14 +5,14 @@
     /* 背景：視認性を確保した深い黒 */
     --color-bg: #0F0F10;
     --color-surface: #1A1A1C;
-    
+
     /* 文字：読みやすいプラチナホワイト */
     --color-text: #F2F2F2;
     --color-sub: #A0A0A0;
-    
+
     /* アクセント：発光感のあるブロンズゴールド */
     --color-accent: #D4AF37;
-    
+
     /* 線：はっきり見えるグレー */
     --color-line: #444444;
 
@@ -26,7 +26,8 @@ body {
     background-color: var(--color-bg);
     color: var(--color-text);
     font-family: var(--font-sans);
-    font-weight: 400; /* 読みやすさ重視のウェイト */
+    font-weight: 400;
+    /* 読みやすさ重視のウェイト */
     margin: 0;
     padding: 0;
     line-height: 2.0;
@@ -34,9 +35,19 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
-ul { padding-left: 20px; }
-li { margin-bottom: 12px; }
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 12px;
+}
 
 /* --- 2. ヘッダー (Glassmorphism) --- */
 header {
@@ -70,10 +81,16 @@ header {
     text-transform: uppercase;
     color: var(--color-sub);
 }
-.site-nav a:hover { color: var(--color-accent); }
+
+.site-nav a:hover {
+    color: var(--color-accent);
+}
 
 /* --- 3. メインレイアウト --- */
-main { padding-top: 120px; min-height: 100vh; }
+main {
+    padding-top: 120px;
+    min-height: 100vh;
+}
 
 /* --- 4. トップページ：ヒーローエリア --- */
 .hero {
@@ -85,6 +102,7 @@ main { padding-top: 120px; min-height: 100vh; }
     border-bottom: 1px solid var(--color-line);
     margin-top: -60px;
 }
+
 .hero-title {
     font-family: var(--font-serif);
     font-size: 8vw;
@@ -93,6 +111,7 @@ main { padding-top: 120px; min-height: 100vh; }
     color: var(--color-text);
     margin: 0;
 }
+
 .text-outline {
     color: transparent;
     -webkit-text-stroke: 1px var(--color-sub);
@@ -123,21 +142,35 @@ main { padding-top: 120px; min-height: 100vh; }
     border-bottom: 1px solid var(--color-line);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     position: relative;
-    border-left: 0px solid transparent; /* アニメーション準備 */
-    cursor: pointer; /* 指マークにする */
+    border-left: 0px solid transparent;
+    /* アニメーション準備 */
+    cursor: pointer;
+    /* 指マークにする */
 }
 
 /* ▼ ホバー時のアクション ▼ */
 .article-row:hover {
     background-color: #1a1a1a;
-    padding-left: 70px; /* 右にスライド */
-    border-left: 6px solid var(--color-accent); /* 左にバー出現 */
+    padding-left: 70px;
+    /* 右にスライド */
+    border-left: 6px solid var(--color-accent);
+    /* 左にバー出現 */
 }
-.article-row:hover .article-title { color: var(--color-accent); }
-.article-row:hover .row-right { color: var(--color-text); }
+
+.article-row:hover .article-title {
+    color: var(--color-accent);
+}
+
+.article-row:hover .row-right {
+    color: var(--color-text);
+}
 
 /* 左側の要素 */
-.row-left { display: flex; flex-direction: column; gap: 10px; }
+.row-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
 .article-id {
     font-family: var(--font-mono);
@@ -146,6 +179,7 @@ main { padding-top: 120px; min-height: 100vh; }
     opacity: 0.8;
     letter-spacing: 0.1em;
 }
+
 .article-title {
     font-family: var(--font-serif);
     font-size: 1.8rem;
@@ -157,10 +191,15 @@ main { padding-top: 120px; min-height: 100vh; }
 
 /* 右側の要素 */
 .row-right {
-    display: flex; align-items: center; gap: 30px;
-    font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-sub);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-sub);
     transition: color 0.3s;
 }
+
 /* 矢印 */
 .arrow {
     font-size: 1.2rem;
@@ -169,7 +208,11 @@ main { padding-top: 120px; min-height: 100vh; }
     transition: all 0.3s ease;
     color: var(--color-accent);
 }
-.article-row:hover .arrow { opacity: 1; transform: translateX(0); }
+
+.article-row:hover .arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
 
 
 /* --- 6. 記事詳細ページ (Article Detail) --- */
@@ -179,8 +222,14 @@ main { padding-top: 120px; min-height: 100vh; }
     padding: 60px 20px 120px;
 }
 
-.article-header { margin-bottom: 60px; }
-.article-header .article-id { margin-bottom: 15px; display: block; }
+.article-header {
+    margin-bottom: 60px;
+}
+
+.article-header .article-id {
+    margin-bottom: 15px;
+    display: block;
+}
 
 .article-main-title {
     font-family: var(--font-serif);
@@ -218,7 +267,8 @@ article h2 {
     margin-bottom: 40px;
     color: var(--color-text);
     padding-left: 20px;
-    border-left: 3px solid var(--color-accent); /* 太く明確な線 */
+    border-left: 3px solid var(--color-accent);
+    /* 太く明確な線 */
 }
 
 article p {
@@ -231,7 +281,7 @@ article p {
 /* 図解プレースホルダー */
 .diagram-placeholder {
     border: 1px dashed var(--color-line);
-    background-color: rgba(255,255,255,0.03);
+    background-color: rgba(255, 255, 255, 0.03);
     color: var(--color-sub);
     padding: 40px;
     text-align: center;
@@ -248,6 +298,7 @@ article p {
     padding: 40px 0;
     margin: 60px 0;
 }
+
 .visualization-container h3 {
     font-family: var(--font-mono);
     color: var(--color-accent);
@@ -258,7 +309,8 @@ article p {
 
 #reaction-chart {
     height: 300px;
-    border-left: 2px solid #666; /* 軸を太く */
+    border-left: 2px solid #666;
+    /* 軸を太く */
     border-bottom: 2px solid #666;
     position: relative;
     overflow: hidden;
@@ -266,29 +318,58 @@ article p {
 
 /* グラフアニメーション */
 @keyframes drawGraph {
-    0% { clip-path: inset(0 100% 0 0); }
-    100% { clip-path: inset(0 0 0 0); }
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    100% {
+        clip-path: inset(0 0 0 0);
+    }
 }
 
 .chart-curve {
-    position: absolute; bottom: 0; left: 0; width: 100%; height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: none;
     animation: drawGraph 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
+
 /* 光る線 */
 .chart-curve::after {
-    content: ''; position: absolute; left: 0; bottom: 0; width: 200%; height: 200%;
-    border-top: 3px solid var(--color-accent); /* 太い線 */
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 200%;
+    height: 200%;
+    border-top: 3px solid var(--color-accent);
+    /* 太い線 */
     border-radius: 100%;
     transform: translate(-50%, 50%);
-    box-shadow: 0 -5px 15px rgba(212, 175, 55, 0.5); /* 発光 */
+    box-shadow: 0 -5px 15px rgba(212, 175, 55, 0.5);
+    /* 発光 */
 }
+
 .chart-labels {
-    display: flex; justify-content: space-between;
-    font-family: var(--font-mono); font-size: 0.8rem; color: #999;
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: #999;
     margin-top: 10px;
 }
-.caption { font-family: var(--font-serif); font-size: 0.8rem; color: #888; text-align: right; margin-top: 15px; font-style: italic; }
+
+.caption {
+    font-family: var(--font-serif);
+    font-size: 0.8rem;
+    color: #888;
+    text-align: right;
+    margin-top: 15px;
+    font-style: italic;
+}
 
 /* アロマ・マトリクス */
 .aroma-matrix {
@@ -299,38 +380,131 @@ article p {
     border: 1px solid var(--color-line);
     margin: 50px 0;
 }
-.aroma-item { background-color: var(--color-bg); padding: 25px; transition: background 0.3s;}
-.aroma-item:hover { background-color: var(--color-surface); }
 
-.chem-name { font-family: var(--font-mono); font-size: 0.9rem; color: var(--color-accent); font-weight: bold; display: block; margin-bottom: 5px; }
-.chem-ja { font-size: 0.8rem; color: #ccc; display: block; margin-bottom: 15px; }
-.scent-bar {
-    font-family: var(--font-mono); font-size: 0.7rem; padding: 6px;
-    border: 1px solid #666; color: #eee; text-align: center; margin-bottom: 10px;
+.aroma-item {
+    background-color: var(--color-bg);
+    padding: 25px;
+    transition: background 0.3s;
 }
-.example { font-size: 0.8rem; color: #999; border-top: 1px solid #333; padding-top: 10px; margin-top: 10px; }
+
+.aroma-item:hover {
+    background-color: var(--color-surface);
+}
+
+.chem-name {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--color-accent);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.chem-ja {
+    font-size: 0.8rem;
+    color: #ccc;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.scent-bar {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    padding: 6px;
+    border: 1px solid #666;
+    color: #eee;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.example {
+    font-size: 0.8rem;
+    color: #999;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+    margin-top: 10px;
+}
 
 /* Callout & Table */
 .callout {
     border-left: 3px solid var(--color-accent);
-    padding: 20px 30px; margin: 50px 0;
-    color: #eee; font-family: var(--font-serif); font-size: 1.1rem;
-    background: rgba(255,255,255,0.03);
+    padding: 20px 30px;
+    margin: 50px 0;
+    color: #eee;
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.03);
 }
-.callout strong { color: var(--color-accent); font-family: var(--font-mono); display: block; margin-bottom: 10px; font-size: 0.8rem; }
 
-.table-container { overflow-x: auto; margin: 40px 0; }
-table { width: 100%; border-collapse: collapse; min-width: 500px; }
-th { text-align: left; padding: 15px; border-bottom: 1px solid var(--color-line); color: var(--color-sub); font-size: 0.75rem; }
-td { padding: 15px; border-bottom: 1px solid var(--color-line); color: var(--color-text); }
-td strong { color: var(--color-accent); }
+.callout strong {
+    color: var(--color-accent);
+    font-family: var(--font-mono);
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin: 40px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 500px;
+}
+
+th {
+    text-align: left;
+    padding: 15px;
+    border-bottom: 1px solid var(--color-line);
+    color: var(--color-sub);
+    font-size: 0.75rem;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid var(--color-line);
+    color: var(--color-text);
+}
+
+td strong {
+    color: var(--color-accent);
+}
 
 /* References */
-.references { margin-top: 100px; border-top: 1px solid var(--color-line); padding-top: 40px; }
-.references h3 { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.2em; color: var(--color-sub); text-transform: uppercase; }
-.references li { font-family: var(--font-mono); font-size: 0.7rem; color: #777; }
-sup { color: var(--color-accent); margin-left: 2px; }
-.annotation { font-size: 0.8rem; color: #888; margin-top: 10px; font-family: var(--font-serif); }
+.references {
+    margin-top: 100px;
+    border-top: 1px solid var(--color-line);
+    padding-top: 40px;
+}
+
+.references h3 {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--color-sub);
+    text-transform: uppercase;
+}
+
+.references li {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: #777;
+}
+
+sup {
+    color: var(--color-accent);
+    margin-left: 2px;
+}
+
+.annotation {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 10px;
+    font-family: var(--font-serif);
+}
 
 /* --- 8. フッター & Mobile --- */
 footer {
@@ -339,16 +513,41 @@ footer {
     font-family: var(--font-mono);
     font-size: 0.75rem;
     color: #666;
-    display: flex; justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
-@media(max-width:768px){
-    header{padding:20px;}
-    .hero-title{font-size:12vw;}
-    .article-row{ flex-direction: column; align-items: flex-start; gap: 20px; padding: 30px 20px; }
-    .row-right{ width: 100%; justify-content: space-between; }
-    .arrow{ opacity: 1; transform: translateX(0); }
-    footer{flex-direction:column; gap:20px; text-align:center;}
+@media(max-width:768px) {
+    header {
+        padding: 20px;
+    }
+
+    .hero-title {
+        font-size: 12vw;
+    }
+
+    .article-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 30px 20px;
+    }
+
+    .row-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .arrow {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
 }
 
 /* --- 新しい概念図のデザイン (Reaction Diagram) --- */
@@ -360,9 +559,11 @@ footer {
     gap: 15px;
     padding: 40px 20px;
     margin: 40px 0;
-    border: 1px dashed var(--color-line); /* 点線でラボっぽく */
-    background: rgba(255,255,255,0.02);
-    flex-wrap: wrap; /* スマホで折り返し */
+    border: 1px dashed var(--color-line);
+    /* 点線でラボっぽく */
+    background: rgba(255, 255, 255, 0.02);
+    flex-wrap: wrap;
+    /* スマホで折り返し */
 }
 
 .molecule-step {
@@ -380,7 +581,8 @@ footer {
     align-items: center;
     text-align: center;
     border: 2px solid var(--color-sub);
-    border-radius: 50%; /* 丸 */
+    border-radius: 50%;
+    /* 丸 */
     font-family: var(--font-mono);
     font-size: 0.75rem;
     color: var(--color-text);
@@ -388,14 +590,16 @@ footer {
 }
 
 .molecule.sugar {
-    border-radius: 4px; /* 糖は四角 */
+    border-radius: 4px;
+    /* 糖は四角 */
     border-color: var(--color-text);
 }
 
 .molecule.flavor {
     border-color: var(--color-accent);
     color: var(--color-accent);
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3); /* 発光 */
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+    /* 発光 */
     border-style: double;
     border-width: 4px;
 }
@@ -433,39 +637,56 @@ footer {
     .reaction-diagram-box {
         gap: 10px;
     }
+
     .molecule {
-        width: 50px; height: 50px; font-size: 0.6rem;
+        width: 50px;
+        height: 50px;
+        font-size: 0.6rem;
     }
-    .operator { font-size: 1rem; }
+
+    .operator {
+        font-size: 1rem;
+    }
 }
 
 /* 記事ヘッダーに背景画像を追加 */
 .article-header {
     /* 画像のパスを指定（ファイル名が違う場合は変更してください） */
     background-image: url('maillard-bg');
-    background-size: cover; /* 枠に合わせて拡大縮小 */
-    background-position: center; /* 中央寄せ */
-    
+    background-size: cover;
+    /* 枠に合わせて拡大縮小 */
+    background-position: center;
+    /* 中央寄せ */
+
     /* 文字を読みやすくするために、画像の上に暗いフィルターをかける */
     position: relative;
     z-index: 1;
-    padding: 80px 40px; /* 余白を広げて画像をしっかり見せる */
-    border-bottom: none; /* 下線は不要なので消す */
+    padding: 80px 40px;
+    /* 余白を広げて画像をしっかり見せる */
+    border-bottom: none;
+    /* 下線は不要なので消す */
 }
 
 /* フィルター用の疑似要素 */
 .article-header::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(15, 15, 16, 0.8); /* 背景色と同じ黒で透過させる */
-    z-index: -1; /* 文字の下に配置 */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 15, 16, 0.8);
+    /* 背景色と同じ黒で透過させる */
+    z-index: -1;
+    /* 文字の下に配置 */
 }
 
 /* タイトルなどの文字色を調整（背景が暗くなるので明るく） */
-.article-main-title, .lead {
+.article-main-title,
+.lead {
     color: #F2F2F2;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.5); /* 影をつけて可読性アップ */
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    /* 影をつけて可読性アップ */
 }
 
 /* --- Article 02: Emulsion Specific Styles --- */
@@ -479,7 +700,7 @@ footer {
     padding: 40px 20px;
     margin: 40px 0;
     border: 1px dashed var(--color-line);
-    background: rgba(255,255,255,0.02);
+    background: rgba(255, 255, 255, 0.02);
     flex-wrap: wrap;
     position: relative;
 }
@@ -499,20 +720,31 @@ footer {
     flex-direction: column;
     align-items: center;
 }
+
 .head {
-    width: 40px; height: 40px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    background-color: var(--color-accent); /* 親水基はアクセント色 */
+    background-color: var(--color-accent);
+    /* 親水基はアクセント色 */
     color: #000;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 0.6rem; font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6rem;
+    font-weight: bold;
     z-index: 2;
 }
+
 .tail {
-    width: 4px; height: 60px;
-    background-color: var(--color-sub); /* 疎水基はグレー */
+    width: 4px;
+    height: 60px;
+    background-color: var(--color-sub);
+    /* 疎水基はグレー */
     margin-top: -5px;
-    display: flex; align-items: flex-end; justify-content: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
     color: var(--color-sub);
     font-size: 0.6rem;
     writing-mode: vertical-rl;
@@ -521,51 +753,105 @@ footer {
 /* ミセル構造モデル */
 .micelle-visual {
     position: relative;
-    width: 180px; height: 180px;
-    display: flex; align-items: center; justify-content: center;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 .water-matrix {
-    position: absolute; top: -10px; left: -10px; right: -10px; bottom: -10px;
-    border: 1px solid #334; /* 水相のイメージ */
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 1px solid #334;
+    /* 水相のイメージ */
     z-index: 0;
-    display: flex; align-items: flex-end; justify-content: right;
-    padding: 5px; font-size: 0.7rem; color: #556;
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+    padding: 5px;
+    font-size: 0.7rem;
+    color: #556;
 }
+
 .oil-droplet {
-    width: 100px; height: 100px;
-    background-color: #222; /* 油滴 */
+    width: 100px;
+    height: 100px;
+    background-color: #222;
+    /* 油滴 */
     border-radius: 50%;
     position: relative;
-    display: flex; align-items: center; justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 1;
 }
-.oil-droplet .label { color: #555; font-weight: bold; }
+
+.oil-droplet .label {
+    color: #555;
+    font-weight: bold;
+}
 
 /* 油滴を取り囲む界面活性剤たち */
 .surfactant {
     position: absolute;
-    width: 10px; height: 30px;
-    background-color: var(--color-sub); /* 尻尾 */
-    top: 50%; left: 50%;
-    transform-origin: 50% 0; /* 中心から放射状に */
+    width: 10px;
+    height: 30px;
+    background-color: var(--color-sub);
+    /* 尻尾 */
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 0;
+    /* 中心から放射状に */
 }
+
 .surfactant::after {
     content: '';
-    position: absolute; bottom: -8px; left: -3px;
-    width: 16px; height: 16px;
+    position: absolute;
+    bottom: -8px;
+    left: -3px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
-    background-color: var(--color-accent); /* 頭（外側） */
+    background-color: var(--color-accent);
+    /* 頭（外側） */
 }
 
 /* 放射状に配置 */
-.s1 { transform: translate(-50%, -50%) rotate(0deg) translateY(-50px); }
-.s2 { transform: translate(-50%, -50%) rotate(45deg) translateY(-50px); }
-.s3 { transform: translate(-50%, -50%) rotate(90deg) translateY(-50px); }
-.s4 { transform: translate(-50%, -50%) rotate(135deg) translateY(-50px); }
-.s5 { transform: translate(-50%, -50%) rotate(180deg) translateY(-50px); }
-.s6 { transform: translate(-50%, -50%) rotate(225deg) translateY(-50px); }
-.s7 { transform: translate(-50%, -50%) rotate(270deg) translateY(-50px); }
-.s8 { transform: translate(-50%, -50%) rotate(315deg) translateY(-50px); }
+.s1 {
+    transform: translate(-50%, -50%) rotate(0deg) translateY(-50px);
+}
+
+.s2 {
+    transform: translate(-50%, -50%) rotate(45deg) translateY(-50px);
+}
+
+.s3 {
+    transform: translate(-50%, -50%) rotate(90deg) translateY(-50px);
+}
+
+.s4 {
+    transform: translate(-50%, -50%) rotate(135deg) translateY(-50px);
+}
+
+.s5 {
+    transform: translate(-50%, -50%) rotate(180deg) translateY(-50px);
+}
+
+.s6 {
+    transform: translate(-50%, -50%) rotate(225deg) translateY(-50px);
+}
+
+.s7 {
+    transform: translate(-50%, -50%) rotate(270deg) translateY(-50px);
+}
+
+.s8 {
+    transform: translate(-50%, -50%) rotate(315deg) translateY(-50px);
+}
 
 
 /* 剪断力グラフ (Shear Chart) */
@@ -576,6 +862,7 @@ footer {
     padding: 20px;
     border-left: 1px solid var(--color-line);
 }
+
 .shear-bar {
     height: 40px;
     background: linear-gradient(90deg, var(--color-accent) 0%, transparent 100%);
@@ -585,10 +872,25 @@ footer {
     position: relative;
     border-radius: 2px;
 }
+
 /* グラフの長さ */
-.b1 { width: 90%; opacity: 0.5; } /* 粒子が大きい＝不安定 */
-.b2 { width: 60%; opacity: 0.8; }
-.b3 { width: 30%; opacity: 1.0; } /* 粒子が小さい＝安定 */
+.b1 {
+    width: 90%;
+    opacity: 0.5;
+}
+
+/* 粒子が大きい＝不安定 */
+.b2 {
+    width: 60%;
+    opacity: 0.8;
+}
+
+.b3 {
+    width: 30%;
+    opacity: 1.0;
+}
+
+/* 粒子が小さい＝安定 */
 
 .shear-label {
     font-family: var(--font-mono);
@@ -596,9 +898,11 @@ footer {
     color: #fff;
     text-shadow: 1px 1px 2px #000;
 }
+
 .droplet-size {
     position: absolute;
-    right: -150px; /* バーの外側に数値を出す */
+    right: -150px;
+    /* バーの外側に数値を出す */
     font-family: var(--font-mono);
     font-size: 0.8rem;
     color: var(--color-text);
@@ -606,8 +910,19 @@ footer {
 
 /* スマホ対応微調整 */
 @media (max-width: 600px) {
-    .droplet-size { position: static; margin-left: auto; padding-right: 10px; font-size: 0.7rem; }
-    .shear-bar { width: 100% !important; justify-content: space-between; } /* スマホでは全幅にして中に文字を入れる */
+    .droplet-size {
+        position: static;
+        margin-left: auto;
+        padding-right: 10px;
+        font-size: 0.7rem;
+    }
+
+    .shear-bar {
+        width: 100% !important;
+        justify-content: space-between;
+    }
+
+    /* スマホでは全幅にして中に文字を入れる */
 }
 
 /* --- 記事ヘッダー背景設定 (Article 02) --- */
@@ -639,15 +954,19 @@ body:has(.article-id:contains('Exp.02')) .article-header {
 .header-emulsion::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(15, 15, 16, 0.7); /* 文字を見やすくするフィルター */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 15, 16, 0.7);
+    /* 文字を見やすくするフィルター */
     z-index: -1;
 }
 
 .header-emulsion .article-main-title,
 .header-emulsion .lead {
     color: #F2F2F2;
-    text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
 /* --- Index Page Restructuring (Database Style) --- */
@@ -686,8 +1005,10 @@ body:has(.article-id:contains('Exp.02')) .article-header {
     display: grid;
     /* 画面幅に合わせて列数を自動調整（最低300px幅） */
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1px; /* グリッドの線を見せるため隙間を空ける */
-    background-color: var(--color-line); /* 隙間の色 */
+    gap: 1px;
+    /* グリッドの線を見せるため隙間を空ける */
+    background-color: var(--color-line);
+    /* 隙間の色 */
     border-bottom: 1px solid var(--color-line);
 }
 
@@ -715,8 +1036,16 @@ body:has(.article-id:contains('Exp.02')) .article-header {
     font-family: var(--font-mono);
     font-size: 0.7rem;
 }
-.card-id { color: var(--color-accent); }
-.card-cat { color: var(--color-sub); border: 1px solid var(--color-line); padding: 2px 6px; }
+
+.card-id {
+    color: var(--color-accent);
+}
+
+.card-cat {
+    color: var(--color-sub);
+    border: 1px solid var(--color-line);
+    padding: 2px 6px;
+}
 
 .card-title {
     font-family: var(--font-serif);
@@ -742,6 +1071,7 @@ body:has(.article-id:contains('Exp.02')) .article-header {
     transform: translateX(-10px);
     transition: all 0.3s;
 }
+
 .article-card:hover .card-arrow {
     opacity: 1;
     transform: translateX(0);
@@ -751,32 +1081,37 @@ body:has(.article-id:contains('Exp.02')) .article-header {
 
 /* ミオグロビン・カラーサイクル図解 */
 .myoglobin-cycle .molecule {
-    width: 80px; height: 80px;
+    width: 80px;
+    height: 80px;
     border-width: 3px;
     font-weight: bold;
     font-size: 0.8rem;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     transition: all 0.3s;
 }
 
 /* 1. 還元型 (Deoxy): 紫 */
 .deoxymyoglobin {
-    border-color: #8E44AD; /* 紫 */
+    border-color: #8E44AD;
+    /* 紫 */
     color: #8E44AD;
     background: radial-gradient(circle at 30% 30%, #2c1a35, #0a0a0a);
 }
 
 /* 2. 酸素化型 (Oxy): 鮮赤 */
 .oxymyoglobin {
-    border-color: #E74C3C; /* 赤 */
+    border-color: #E74C3C;
+    /* 赤 */
     color: #E74C3C;
     background: radial-gradient(circle at 30% 30%, #3a1515, #0a0a0a);
-    box-shadow: 0 0 20px rgba(231, 76, 60, 0.4); /* 発光 */
+    box-shadow: 0 0 20px rgba(231, 76, 60, 0.4);
+    /* 発光 */
 }
 
 /* 3. 酸化型 (Met): 褐色 */
 .metmyoglobin {
-    border-color: #8D6E63; /* 茶 */
+    border-color: #8D6E63;
+    /* 茶 */
     color: #8D6E63;
     background: radial-gradient(circle at 30% 30%, #2d2624, #0a0a0a);
 }
@@ -785,17 +1120,22 @@ body:has(.article-id:contains('Exp.02')) .article-header {
 .chart-myoglobin {
     background: none;
 }
+
 .chart-myoglobin::after {
     content: '';
     position: absolute;
-    left: 0; top: 0; /* 上からスタート */
-    width: 200%; height: 200%;
+    left: 0;
+    top: 0;
+    /* 上からスタート */
+    width: 200%;
+    height: 200%;
     /* 赤色が急激に失われるカーブ */
     border-top: 3px solid #E74C3C;
     border-radius: 0;
     /* ベジェ曲線で減衰を表現 */
-    border-left: 3px solid transparent; 
-    transform: translate(-50%, 20%) rotate(20deg); /* 擬似的な下降カーブ */
+    border-left: 3px solid transparent;
+    transform: translate(-50%, 20%) rotate(20deg);
+    /* 擬似的な下降カーブ */
     box-shadow: none;
 }
 
@@ -810,17 +1150,22 @@ body:has(.article-id:contains('Exp.02')) .article-header {
     border-bottom: none;
     z-index: 1;
 }
+
 .header-preservation::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: rgba(15, 15, 16, 0.7);
     z-index: -1;
 }
+
 .header-preservation .article-main-title,
 .header-preservation .lead {
     color: #F2F2F2;
-    text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
 /* 鍵と鍵穴モデル (Lock & Key) */
@@ -831,21 +1176,33 @@ body:has(.article-id:contains('Exp.02')) .article-header {
     gap: 10px;
     padding: 30px;
     border: 1px dashed var(--color-line);
-    background: rgba(255,255,255,0.02);
+    background: rgba(255, 255, 255, 0.02);
 }
+
 .enzyme-shape {
-    width: 60px; height: 60px;
+    width: 60px;
+    height: 60px;
     background-color: var(--color-sub);
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 60%, 30% 60%, 30% 40%, 0% 40%);
-    display: flex; align-items: center; justify-content: center;
-    color: #000; font-size: 0.6rem; font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-size: 0.6rem;
+    font-weight: bold;
 }
+
 .substrate-shape {
-    width: 40px; height: 40px;
+    width: 40px;
+    height: 40px;
     background-color: var(--color-accent);
     clip-path: polygon(0% 40%, 30% 40%, 30% 60%, 0% 60%, 0% 100%, 100% 100%, 100% 0%, 0% 0%);
-    display: flex; align-items: center; justify-content: center;
-    color: #000; font-size: 0.6rem; font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-size: 0.6rem;
+    font-weight: bold;
 }
 
 /* pH vs 酵素活性グラフ */
@@ -856,8 +1213,13 @@ body:has(.article-id:contains('Exp.02')) .article-header {
     position: relative;
     margin: 20px 0;
 }
+
 .bell-curve {
-    position: absolute; bottom: 0; left: 10%; width: 80%; height: 90%;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 90%;
     border-top: 3px solid var(--color-accent);
     border-left: 3px solid transparent;
     border-right: 3px solid transparent;
@@ -865,11 +1227,11 @@ body:has(.article-id:contains('Exp.02')) .article-header {
     box-shadow: 0 -5px 15px rgba(212, 175, 55, 0.3);
 }
 
-    /* ※CSSだけで正確な逆S字を描くのは難しいため、
+/* ※CSSだけで正確な逆S字を描くのは難しいため、
        ここでは簡易的に「右肩下がりの赤いライン」として表現しています。
        より正確にはSVG推奨ですが、トンマナとしてはこれで機能します */
-    border-top: 3px solid #E74C3C;
-    box-shadow: 0 -5px 15px rgba(231, 76, 60, 0.3);
+border-top: 3px solid #E74C3C;
+box-shadow: 0 -5px 15px rgba(231, 76, 60, 0.3);
 }
 
 /* 記事ヘッダー背景（個別設定） */
@@ -897,15 +1259,19 @@ body:has(.article-id:contains('Exp.03')) .article-header {
 .header-myoglobin::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(15, 15, 16, 0.6); /* 文字を見やすくするフィルター */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 15, 16, 0.6);
+    /* 文字を見やすくするフィルター */
     z-index: -1;
 }
 
 .header-myoglobin .article-main-title,
 .header-myoglobin .lead {
     color: #F2F2F2;
-    text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
 /* --- Article 04: Collagen Specific Styles --- */
@@ -919,11 +1285,12 @@ body:has(.article-id:contains('Exp.03')) .article-header {
     padding: 40px 20px;
     margin: 40px 0;
     border: 1px dashed var(--color-line);
-    background: rgba(255,255,255,0.02);
+    background: rgba(255, 255, 255, 0.02);
     overflow: hidden;
 }
 
-.helix-structure, .gelatin-structure {
+.helix-structure,
+.gelatin-structure {
     width: 60px;
     height: 120px;
     position: relative;
@@ -939,36 +1306,72 @@ body:has(.article-id:contains('Exp.03')) .article-header {
 }
 
 /* 螺旋状態：ねじれた紐のように */
-.helix-structure .s1 { background: #E57373; left: 10px; transform: skewX(20deg); z-index: 3; }
-.helix-structure .s2 { background: #FFD54F; left: 27px; transform: skewX(-20deg); z-index: 2; }
-.helix-structure .s3 { background: #4FC3F7; left: 44px; transform: skewX(20deg); z-index: 1; }
+.helix-structure .s1 {
+    background: #E57373;
+    left: 10px;
+    transform: skewX(20deg);
+    z-index: 3;
+}
+
+.helix-structure .s2 {
+    background: #FFD54F;
+    left: 27px;
+    transform: skewX(-20deg);
+    z-index: 2;
+}
+
+.helix-structure .s3 {
+    background: #4FC3F7;
+    left: 44px;
+    transform: skewX(20deg);
+    z-index: 1;
+}
 
 /* ゼラチン状態：波打ってほどけた様子 */
-.gelatin-structure .w1 { 
-    background: #E57373; left: 0; 
-    animation: wave 3s infinite ease-in-out; 
+.gelatin-structure .w1 {
+    background: #E57373;
+    left: 0;
+    animation: wave 3s infinite ease-in-out;
 }
-.gelatin-structure .w2 { 
-    background: #FFD54F; left: 27px; 
-    animation: wave 3s infinite ease-in-out 0.5s; 
+
+.gelatin-structure .w2 {
+    background: #FFD54F;
+    left: 27px;
+    animation: wave 3s infinite ease-in-out 0.5s;
 }
-.gelatin-structure .w3 { 
-    background: #4FC3F7; left: 54px; 
-    animation: wave 3s infinite ease-in-out 1s; 
+
+.gelatin-structure .w3 {
+    background: #4FC3F7;
+    left: 54px;
+    animation: wave 3s infinite ease-in-out 1s;
 }
 
 @keyframes wave {
-    0%, 100% { transform: translateY(0) scaleY(1); }
-    50% { transform: translateY(10px) scaleY(1.1); }
+
+    0%,
+    100% {
+        transform: translateY(0) scaleY(1);
+    }
+
+    50% {
+        transform: translateY(10px) scaleY(1.1);
+    }
 }
 
 /* T-Tグラフ (3本のカーブ) */
-#reaction-chart { position: relative; }
+#reaction-chart {
+    position: relative;
+}
 
 .chart-pressure {
     /* 圧力鍋：急激に立ち上がる */
-    border-top: 3px solid #E57373; /* 赤 */
-    width: 40%; height: 200%; left: 0; bottom: 0; position: absolute;
+    border-top: 3px solid #E57373;
+    /* 赤 */
+    width: 40%;
+    height: 200%;
+    left: 0;
+    bottom: 0;
+    position: absolute;
     border-radius: 0 100% 0 0;
     transform: translate(0, 50%);
     box-shadow: 0 -5px 10px rgba(229, 115, 115, 0.3);
@@ -976,8 +1379,13 @@ body:has(.article-id:contains('Exp.03')) .article-header {
 
 .chart-boil {
     /* 沸騰：標準的 */
-    border-top: 3px solid #FFD54F; /* 黄 */
-    width: 80%; height: 200%; left: 0; bottom: 0; position: absolute;
+    border-top: 3px solid #FFD54F;
+    /* 黄 */
+    width: 80%;
+    height: 200%;
+    left: 0;
+    bottom: 0;
+    position: absolute;
     border-radius: 0 100% 0 0;
     transform: translate(0, 50%);
     box-shadow: 0 -5px 10px rgba(255, 213, 79, 0.3);
@@ -985,8 +1393,13 @@ body:has(.article-id:contains('Exp.03')) .article-header {
 
 .chart-simmer {
     /* シマー：緩やか */
-    border-top: 3px solid #4FC3F7; /* 青 */
-    width: 150%; height: 200%; left: 0; bottom: 0; position: absolute;
+    border-top: 3px solid #4FC3F7;
+    /* 青 */
+    width: 150%;
+    height: 200%;
+    left: 0;
+    bottom: 0;
+    position: absolute;
     border-radius: 0 100% 0 0;
     transform: translate(0, 50%);
     box-shadow: 0 -5px 10px rgba(79, 195, 247, 0.3);
@@ -1001,16 +1414,27 @@ body:has(.article-id:contains('Exp.03')) .article-header {
     gap: 5px;
     font-family: var(--font-mono);
     font-size: 0.7rem;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
     padding: 10px;
     border: 1px solid var(--color-line);
 }
+
 .legend-item::before {
-    content: '●'; margin-right: 5px;
+    content: '●';
+    margin-right: 5px;
 }
-.pressure { color: #E57373; }
-.boil { color: #FFD54F; }
-.simmer { color: #4FC3F7; }
+
+.pressure {
+    color: #E57373;
+}
+
+.boil {
+    color: #FFD54F;
+}
+
+.simmer {
+    color: #4FC3F7;
+}
 
 /* 記事ヘッダー背景（個別設定） */
 /* 必要であれば生成した画像を collagen-bg.png として保存し、ここを有効化してください */
@@ -1037,15 +1461,19 @@ body:has(.article-id:contains('Exp.04')) .article-header {
 .header-collagen::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(15, 15, 16, 0.6); /* 文字を見やすくするフィルター */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 15, 16, 0.6);
+    /* 文字を見やすくするフィルター */
     z-index: -1;
 }
 
 .header-collagen .article-main-title,
 .header-collagen .lead {
     color: #F2F2F2;
-    text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
 /* --- Article 05: Osmosis Specific Styles --- */
@@ -1058,7 +1486,7 @@ body:has(.article-id:contains('Exp.04')) .article-header {
     padding: 60px 20px;
     margin: 40px 0;
     border: 1px dashed var(--color-line);
-    background: rgba(255,255,255,0.02);
+    background: rgba(255, 255, 255, 0.02);
     position: relative;
     overflow: hidden;
 }
@@ -1071,7 +1499,10 @@ body:has(.article-id:contains('Exp.04')) .article-header {
 
 .cell-membrane {
     position: absolute;
-    bottom: 0; left: 0; width: 100%; height: 60%;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
     background: #2a2a2a;
     border: 2px solid #555;
     border-radius: 10px 10px 0 0;
@@ -1080,13 +1511,19 @@ body:has(.article-id:contains('Exp.04')) .article-header {
     align-items: center;
     z-index: 1;
 }
+
 .cell-label {
-    font-family: var(--font-mono); font-size: 0.8rem; color: #888;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: #888;
 }
 
 .salt-layer {
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 40%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
@@ -1099,23 +1536,56 @@ body:has(.article-id:contains('Exp.04')) .article-header {
     font-size: 0.8rem;
     padding: 2px 5px;
     border-radius: 4px;
-    background: #fff; color: #000;
+    background: #fff;
+    color: #000;
 }
-.na { background: #FFD54F; } /* Na: 黄色 */
-.cl { background: #4FC3F7; } /* Cl: 青 */
+
+.na {
+    background: #FFD54F;
+}
+
+/* Na: 黄色 */
+.cl {
+    background: #4FC3F7;
+}
+
+/* Cl: 青 */
 
 .water-molecule {
     position: absolute;
-    font-size: 0.7rem; color: #4FC3F7;
+    font-size: 0.7rem;
+    color: #4FC3F7;
     font-family: var(--font-mono);
 }
-.w1 { bottom: 10px; left: 20px; animation: osmosisOut 3s infinite ease-in-out; }
-.w2 { bottom: 20px; right: 20px; animation: osmosisOut 3s infinite ease-in-out 1.5s; }
+
+.w1 {
+    bottom: 10px;
+    left: 20px;
+    animation: osmosisOut 3s infinite ease-in-out;
+}
+
+.w2 {
+    bottom: 20px;
+    right: 20px;
+    animation: osmosisOut 3s infinite ease-in-out 1.5s;
+}
 
 @keyframes osmosisOut {
-    0% { transform: translateY(0); opacity: 1; }
-    50% { transform: translateY(-60px); opacity: 0.8; } /* 外へ出る動き */
-    100% { transform: translateY(-80px); opacity: 0; }
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-60px);
+        opacity: 0.8;
+    }
+
+    /* 外へ出る動き */
+    100% {
+        transform: translateY(-80px);
+        opacity: 0;
+    }
 }
 
 .flow-arrow {
@@ -1124,31 +1594,50 @@ body:has(.article-id:contains('Exp.04')) .article-header {
     font-family: var(--font-mono);
     color: var(--color-accent);
 }
-.out { right: -80px; top: 20px; text-align: left; }
-.in { left: -80px; top: 60px; text-align: right; }
+
+.out {
+    right: -80px;
+    top: 20px;
+    text-align: left;
+}
+
+.in {
+    left: -80px;
+    top: 60px;
+    text-align: right;
+}
 
 
 /* U字型グラフ (Moisture Curve) */
 .chart-moisture {
     background: none;
 }
+
 .chart-moisture::after {
     content: '';
     position: absolute;
-    left: 0; top: 0;
-    width: 200%; height: 200%;
+    left: 0;
+    top: 0;
+    width: 200%;
+    height: 200%;
     /* U字カーブを描く */
-    border-bottom: 3px solid #4FC3F7; /* 水分量を示す青 */
+    border-bottom: 3px solid #4FC3F7;
+    /* 水分量を示す青 */
     border-radius: 50%;
-    transform: translate(-50%, -80%); /* 位置調整 */
+    transform: translate(-50%, -80%);
+    /* 位置調整 */
     box-shadow: 0 5px 15px rgba(79, 195, 247, 0.3);
 }
 
 .danger-zone {
     position: absolute;
-    left: 25%; width: 35%; /* 10分〜40分の間 */
-    top: 0; bottom: 0;
-    background: rgba(229, 115, 115, 0.1); /* 赤い帯 */
+    left: 25%;
+    width: 35%;
+    /* 10分〜40分の間 */
+    top: 0;
+    bottom: 0;
+    background: rgba(229, 115, 115, 0.1);
+    /* 赤い帯 */
     border-left: 1px dashed #E57373;
     border-right: 1px dashed #E57373;
     display: flex;
@@ -1184,15 +1673,19 @@ body:has(.article-id:contains('Exp.05')) .article-header {
 .header-salt::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(15, 15, 16, 0.7); /* 文字を見やすくするフィルター */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 15, 16, 0.7);
+    /* 文字を見やすくするフィルター */
     z-index: -1;
 }
 
 .header-salt .article-main-title,
 .header-salt .lead {
     color: #F2F2F2;
-    text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
 /* --- Article 02: Emulsion Specific Styles --- */
@@ -1206,7 +1699,7 @@ body:has(.article-id:contains('Exp.05')) .article-header {
     padding: 40px 20px;
     margin: 40px 0;
     border: 1px dashed var(--color-line);
-    background: rgba(255,255,255,0.02);
+    background: rgba(255, 255, 255, 0.02);
     flex-wrap: wrap;
     position: relative;
 }
@@ -1226,20 +1719,31 @@ body:has(.article-id:contains('Exp.05')) .article-header {
     flex-direction: column;
     align-items: center;
 }
+
 .head {
-    width: 40px; height: 40px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    background-color: var(--color-accent); /* 親水基はアクセント色 */
+    background-color: var(--color-accent);
+    /* 親水基はアクセント色 */
     color: #000;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 0.6rem; font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6rem;
+    font-weight: bold;
     z-index: 2;
 }
+
 .tail {
-    width: 4px; height: 60px;
-    background-color: var(--color-sub); /* 疎水基はグレー */
+    width: 4px;
+    height: 60px;
+    background-color: var(--color-sub);
+    /* 疎水基はグレー */
     margin-top: -5px;
-    display: flex; align-items: flex-end; justify-content: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
     color: var(--color-sub);
     font-size: 0.6rem;
     writing-mode: vertical-rl;
@@ -1248,51 +1752,105 @@ body:has(.article-id:contains('Exp.05')) .article-header {
 /* ミセル構造モデル */
 .micelle-visual {
     position: relative;
-    width: 180px; height: 180px;
-    display: flex; align-items: center; justify-content: center;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 .water-matrix {
-    position: absolute; top: -10px; left: -10px; right: -10px; bottom: -10px;
-    border: 1px solid #334; /* 水相のイメージ */
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 1px solid #334;
+    /* 水相のイメージ */
     z-index: 0;
-    display: flex; align-items: flex-end; justify-content: right;
-    padding: 5px; font-size: 0.7rem; color: #556;
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+    padding: 5px;
+    font-size: 0.7rem;
+    color: #556;
 }
+
 .oil-droplet {
-    width: 100px; height: 100px;
-    background-color: #222; /* 油滴 */
+    width: 100px;
+    height: 100px;
+    background-color: #222;
+    /* 油滴 */
     border-radius: 50%;
     position: relative;
-    display: flex; align-items: center; justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 1;
 }
-.oil-droplet .label { color: #555; font-weight: bold; }
+
+.oil-droplet .label {
+    color: #555;
+    font-weight: bold;
+}
 
 /* 油滴を取り囲む界面活性剤たち */
 .surfactant {
     position: absolute;
-    width: 10px; height: 30px;
-    background-color: var(--color-sub); /* 尻尾 */
-    top: 50%; left: 50%;
-    transform-origin: 50% 0; /* 中心から放射状に */
+    width: 10px;
+    height: 30px;
+    background-color: var(--color-sub);
+    /* 尻尾 */
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 0;
+    /* 中心から放射状に */
 }
+
 .surfactant::after {
     content: '';
-    position: absolute; bottom: -8px; left: -3px;
-    width: 16px; height: 16px;
+    position: absolute;
+    bottom: -8px;
+    left: -3px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
-    background-color: var(--color-accent); /* 頭（外側） */
+    background-color: var(--color-accent);
+    /* 頭（外側） */
 }
 
 /* 放射状に配置 */
-.s1 { transform: translate(-50%, -50%) rotate(0deg) translateY(-50px); }
-.s2 { transform: translate(-50%, -50%) rotate(45deg) translateY(-50px); }
-.s3 { transform: translate(-50%, -50%) rotate(90deg) translateY(-50px); }
-.s4 { transform: translate(-50%, -50%) rotate(135deg) translateY(-50px); }
-.s5 { transform: translate(-50%, -50%) rotate(180deg) translateY(-50px); }
-.s6 { transform: translate(-50%, -50%) rotate(225deg) translateY(-50px); }
-.s7 { transform: translate(-50%, -50%) rotate(270deg) translateY(-50px); }
-.s8 { transform: translate(-50%, -50%) rotate(315deg) translateY(-50px); }
+.s1 {
+    transform: translate(-50%, -50%) rotate(0deg) translateY(-50px);
+}
+
+.s2 {
+    transform: translate(-50%, -50%) rotate(45deg) translateY(-50px);
+}
+
+.s3 {
+    transform: translate(-50%, -50%) rotate(90deg) translateY(-50px);
+}
+
+.s4 {
+    transform: translate(-50%, -50%) rotate(135deg) translateY(-50px);
+}
+
+.s5 {
+    transform: translate(-50%, -50%) rotate(180deg) translateY(-50px);
+}
+
+.s6 {
+    transform: translate(-50%, -50%) rotate(225deg) translateY(-50px);
+}
+
+.s7 {
+    transform: translate(-50%, -50%) rotate(270deg) translateY(-50px);
+}
+
+.s8 {
+    transform: translate(-50%, -50%) rotate(315deg) translateY(-50px);
+}
 
 
 /* 剪断力グラフ (Shear Chart) */
@@ -1303,6 +1861,7 @@ body:has(.article-id:contains('Exp.05')) .article-header {
     padding: 20px;
     border-left: 1px solid var(--color-line);
 }
+
 .shear-bar {
     height: 40px;
     background: linear-gradient(90deg, var(--color-accent) 0%, transparent 100%);
@@ -1312,10 +1871,25 @@ body:has(.article-id:contains('Exp.05')) .article-header {
     position: relative;
     border-radius: 2px;
 }
+
 /* グラフの長さ */
-.b1 { width: 90%; opacity: 0.5; } /* 粒子が大きい＝不安定 */
-.b2 { width: 60%; opacity: 0.8; }
-.b3 { width: 30%; opacity: 1.0; } /* 粒子が小さい＝安定 */
+.b1 {
+    width: 90%;
+    opacity: 0.5;
+}
+
+/* 粒子が大きい＝不安定 */
+.b2 {
+    width: 60%;
+    opacity: 0.8;
+}
+
+.b3 {
+    width: 30%;
+    opacity: 1.0;
+}
+
+/* 粒子が小さい＝安定 */
 
 .shear-label {
     font-family: var(--font-mono);
@@ -1323,9 +1897,11 @@ body:has(.article-id:contains('Exp.05')) .article-header {
     color: #fff;
     text-shadow: 1px 1px 2px #000;
 }
+
 .droplet-size {
     position: absolute;
-    right: -150px; /* バーの外側に数値を出す */
+    right: -150px;
+    /* バーの外側に数値を出す */
     font-family: var(--font-mono);
     font-size: 0.8rem;
     color: var(--color-text);
@@ -1333,8 +1909,19 @@ body:has(.article-id:contains('Exp.05')) .article-header {
 
 /* スマホ対応微調整 */
 @media (max-width: 600px) {
-    .droplet-size { position: static; margin-left: auto; padding-right: 10px; font-size: 0.7rem; }
-    .shear-bar { width: 100% !important; justify-content: space-between; } /* スマホでは全幅にして中に文字を入れる */
+    .droplet-size {
+        position: static;
+        margin-left: auto;
+        padding-right: 10px;
+        font-size: 0.7rem;
+    }
+
+    .shear-bar {
+        width: 100% !important;
+        justify-content: space-between;
+    }
+
+    /* スマホでは全幅にして中に文字を入れる */
 }
 
 .header-egg {
@@ -1346,16 +1933,22 @@ body:has(.article-id:contains('Exp.05')) .article-header {
     border-bottom: none;
     z-index: 1;
 }
+
 .header-egg::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: rgba(15, 15, 16, 0.7);
     z-index: -1;
 }
-.header-egg .article-main-title, .header-egg .lead {
+
+.header-egg .article-main-title,
+.header-egg .lead {
     color: #F2F2F2;
-    text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
 /* --- Article 07: Starch Specific Styles --- */
@@ -1369,7 +1962,7 @@ body:has(.article-id:contains('Exp.05')) .article-header {
     padding: 40px 10px;
     margin: 40px 0;
     border: 1px dashed var(--color-line);
-    background: rgba(255,255,255,0.02);
+    background: rgba(255, 255, 255, 0.02);
     flex-wrap: wrap;
 }
 
@@ -1392,21 +1985,26 @@ body:has(.article-id:contains('Exp.05')) .article-header {
 
 /* 1. 生の状態 (Raw): 小さく硬い */
 .starch-granule.raw {
-    width: 50px; height: 50px;
+    width: 50px;
+    height: 50px;
     background: #222;
 }
 
 /* 2. 膨潤 (Swelling): 水を吸って巨大化 */
 .starch-granule.swelling {
-    width: 80px; height: 80px;
+    width: 80px;
+    height: 80px;
     background: radial-gradient(circle, #444 30%, #222 100%);
-    border-color: #FFD54F; /* 活性化 */
+    border-color: #FFD54F;
+    /* 活性化 */
 }
 
 /* 3. 糊化 (Gel): 崩壊してアミロース溶出 */
 .starch-granule.gelatinized {
-    width: 90px; height: 90px;
-    background: rgba(255, 213, 79, 0.2); /* ゲル状 */
+    width: 90px;
+    height: 90px;
+    background: rgba(255, 213, 79, 0.2);
+    /* ゲル状 */
     border: 2px dashed #FFD54F;
     box-shadow: 0 0 15px rgba(255, 213, 79, 0.3);
 }
@@ -1414,18 +2012,27 @@ body:has(.article-id:contains('Exp.05')) .article-header {
 /* 溶出したアミロース（ひも状） */
 .leaked-amylose {
     position: absolute;
-    width: 120%; height: 120%;
+    width: 120%;
+    height: 120%;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
     animation: wobble 4s infinite linear;
 }
+
 @keyframes wobble {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .granule-label {
-    font-family: var(--font-mono); font-size: 0.7rem; color: #fff;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: #fff;
     z-index: 2;
 }
 
@@ -1434,23 +2041,28 @@ body:has(.article-id:contains('Exp.05')) .article-header {
 .curve-retrogradation {
     background: none;
 }
+
 .curve-retrogradation::after {
     content: '';
     position: absolute;
-    left: 0; bottom: 0;
-    width: 100%; height: 100%;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
     /* 4度付近で山なりになるカーブ */
     background: linear-gradient(to right, transparent 0%, transparent 20%, rgba(79, 195, 247, 0.8) 35%, transparent 60%);
     /* 擬似的な山の線 */
     border-top: 2px solid #4FC3F7;
     border-radius: 50% 50% 0 0 / 100% 100% 0 0;
-    transform: scaleX(0.5) translateX(30%); /* 位置調整：4℃付近をピークに */
+    transform: scaleX(0.5) translateX(30%);
+    /* 位置調整：4℃付近をピークに */
     box-shadow: 0 -5px 15px rgba(79, 195, 247, 0.3);
 }
 
 .peak-zone {
     position: absolute;
-    left: 30%; top: 20%;
+    left: 30%;
+    top: 20%;
     font-family: var(--font-mono);
     font-size: 0.7rem;
     color: #4FC3F7;
@@ -1499,15 +2111,19 @@ body:has(.article-id:contains('Exp.05')) .article-header {
 .header-starch::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(15, 15, 16, 0.7); /* 文字を見やすくするフィルター */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 15, 16, 0.7);
+    /* 文字を見やすくするフィルター */
     z-index: -1;
 }
 
 .header-starch .article-main-title,
 .header-starch .lead {
     color: #F2F2F2;
-    text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
 /* --- Article 08: Oil & Fat Specific Styles --- */
@@ -1521,7 +2137,7 @@ body:has(.article-id:contains('Exp.05')) .article-header {
     padding: 40px 10px;
     margin: 40px 0;
     border: 1px dashed var(--color-line);
-    background: rgba(255,255,255,0.02);
+    background: rgba(255, 255, 255, 0.02);
     flex-wrap: wrap;
 }
 
@@ -1533,12 +2149,17 @@ body:has(.article-id:contains('Exp.05')) .article-header {
 }
 
 .fat-molecule {
-    width: 80px; height: 80px;
-    display: flex; align-items: center; justify-content: center;
-    font-family: var(--font-mono); font-size: 0.7rem; color: #000;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: #000;
     border-radius: 4px;
     font-weight: bold;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* 1. トリグリセリド (正常): 黄色 */
@@ -1551,18 +2172,22 @@ body:has(.article-id:contains('Exp.05')) .article-header {
 .ffa {
     background: #FFB74D;
     border: 2px dashed #FF9800;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 50% 100%, 0% 70%); /* 不安定な形 */
+    clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 50% 100%, 0% 70%);
+    /* 不安定な形 */
 }
 
 /* 3. 重合物 (劣化): 茶色 */
 .polymer {
     background: #8D6E63;
     border: 2px solid #5D4037;
-    border-radius: 50%; /* 塊 */
+    border-radius: 50%;
+    /* 塊 */
 }
 
 .step-desc {
-    font-size: 0.7rem; color: var(--color-sub); text-align: center;
+    font-size: 0.7rem;
+    color: var(--color-sub);
+    text-align: center;
 }
 
 
@@ -1570,24 +2195,32 @@ body:has(.article-id:contains('Exp.05')) .article-header {
 .curve-smoke-point {
     background: none;
 }
+
 .curve-smoke-point::after {
     content: '';
     position: absolute;
-    left: 0; top: 0;
-    width: 100%; height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     /* 右肩下がりのカーブ */
     border-top: 3px solid #FF9800;
-    border-radius: 0 100% 0 0 / 0 100% 0 0; /* 1/4円弧の逆 */
+    border-radius: 0 100% 0 0 / 0 100% 0 0;
+    /* 1/4円弧の逆 */
     transform: scaleX(1.5) rotate(15deg) translate(0, 20%);
     box-shadow: 0 -5px 15px rgba(255, 152, 0, 0.3);
 }
 
 .fry-temp-line {
     position: absolute;
-    left: 0; right: 0; top: 60%; /* 180度の位置 */
+    left: 0;
+    right: 0;
+    top: 60%;
+    /* 180度の位置 */
     border-top: 1px dashed #E57373;
     color: #E57373;
-    font-family: var(--font-mono); font-size: 0.7rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
     padding-left: 10px;
 }
 
@@ -1617,7 +2250,8 @@ body:has(.article-id:contains('Exp.05')) .article-header {
 
 /* --- Article 08 Header --- */
 .header-oil {
-    background-image: url('oil-bg.png'); /* ここがファイル名と一致していること */
+    background-image: url('oil-bg.png');
+    /* ここがファイル名と一致していること */
     background-size: cover;
     background-position: center;
     position: relative;
@@ -1629,7 +2263,10 @@ body:has(.article-id:contains('Exp.05')) .article-header {
 .header-oil::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: rgba(15, 15, 16, 0.7);
     z-index: -1;
 }
@@ -1637,7 +2274,7 @@ body:has(.article-id:contains('Exp.05')) .article-header {
 .header-oil .article-main-title,
 .header-oil .lead {
     color: #F2F2F2;
-    text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
 /* --- Article 09: Aroma Extraction Specific Styles --- */
@@ -1651,7 +2288,7 @@ body:has(.article-id:contains('Exp.05')) .article-header {
     padding: 40px 20px;
     margin: 40px 0;
     border: 1px dashed var(--color-line);
-    background: rgba(255,255,255,0.02);
+    background: rgba(255, 255, 255, 0.02);
     position: relative;
 }
 
@@ -1668,12 +2305,16 @@ body:has(.article-id:contains('Exp.05')) .article-header {
 }
 
 .solvent-label {
-    position: absolute; top: 10px;
-    font-family: var(--font-mono); font-size: 0.7rem; color: #888;
+    position: absolute;
+    top: 10px;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: #888;
 }
 
 .aroma-molecule {
-    width: 80px; height: 80px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     display: flex;
     flex-direction: column;
@@ -1701,11 +2342,21 @@ body:has(.article-id:contains('Exp.05')) .article-header {
     box-shadow: 0 0 10px rgba(255, 213, 79, 0.2);
 }
 
-.m-label { font-size: 0.6rem; display: block; margin-bottom: 2px; }
-.m-ex { font-size: 0.6rem; opacity: 0.8; font-weight: normal; }
+.m-label {
+    font-size: 0.6rem;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.m-ex {
+    font-size: 0.6rem;
+    opacity: 0.8;
+    font-weight: normal;
+}
 
 .separator {
-    width: 2px; height: 100px;
+    width: 2px;
+    height: 100px;
     background-color: var(--color-line);
 }
 
@@ -1713,8 +2364,13 @@ body:has(.article-id:contains('Exp.05')) .article-header {
 /* 抽出効率グラフ (3本線) */
 .curve-oil {
     /* 油：脂溶性成分の抽出（高い） */
-    border-top: 3px solid #FFD54F; /* 黄 */
-    width: 150%; height: 200%; left: 0; bottom: 0; position: absolute;
+    border-top: 3px solid #FFD54F;
+    /* 黄 */
+    width: 150%;
+    height: 200%;
+    left: 0;
+    bottom: 0;
+    position: absolute;
     border-radius: 0 100% 0 0;
     transform: translate(0, 20%);
     box-shadow: 0 -5px 10px rgba(255, 213, 79, 0.3);
@@ -1722,8 +2378,13 @@ body:has(.article-id:contains('Exp.05')) .article-header {
 
 .curve-alcohol {
     /* アルコール：両親媒性（中〜高） */
-    border-top: 3px solid #66BB6A; /* 緑 */
-    width: 120%; height: 200%; left: 0; bottom: 0; position: absolute;
+    border-top: 3px solid #66BB6A;
+    /* 緑 */
+    width: 120%;
+    height: 200%;
+    left: 0;
+    bottom: 0;
+    position: absolute;
     border-radius: 0 100% 0 0;
     transform: translate(0, 40%);
     box-shadow: 0 -5px 10px rgba(102, 187, 106, 0.3);
@@ -1731,16 +2392,30 @@ body:has(.article-id:contains('Exp.05')) .article-header {
 
 .curve-water {
     /* 水：脂溶性成分は溶けない（低い） */
-    border-top: 2px dashed #4FC3F7; /* 青 */
-    width: 100%; height: 200%; left: 0; bottom: 0; position: absolute;
+    border-top: 2px dashed #4FC3F7;
+    /* 青 */
+    width: 100%;
+    height: 200%;
+    left: 0;
+    bottom: 0;
+    position: absolute;
     border-radius: 0 100% 0 0;
-    transform: translate(0, 85%); /* 低空飛行 */
+    transform: translate(0, 85%);
+    /* 低空飛行 */
     opacity: 0.7;
 }
 
-.l-oil { color: #FFD54F; }
-.l-alcohol { color: #66BB6A; }
-.l-water { color: #4FC3F7; }
+.l-oil {
+    color: #FFD54F;
+}
+
+.l-alcohol {
+    color: #66BB6A;
+}
+
+.l-water {
+    color: #4FC3F7;
+}
 
 /* 記事ヘッダー背景（個別設定） */
 /* 必要に応じて有効化
@@ -1783,15 +2458,19 @@ body:has(.article-id:contains('Exp.05')) .article-header {
 .header-aroma::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(15, 15, 16, 0.7); /* 文字を見やすくするフィルター */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 15, 16, 0.7);
+    /* 文字を見やすくするフィルター */
     z-index: -1;
 }
 
 .header-aroma .article-main-title,
 .header-aroma .lead {
     color: #F2F2F2;
-    text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
 /* --- Article 10: Heat Transfer Specific Styles --- */
@@ -1805,7 +2484,7 @@ body:has(.article-id:contains('Exp.05')) .article-header {
     padding: 40px 10px;
     margin: 40px 0;
     border: 1px dashed var(--color-line);
-    background: rgba(255,255,255,0.02);
+    background: rgba(255, 255, 255, 0.02);
     flex-wrap: wrap;
 }
 
@@ -1833,7 +2512,8 @@ body:has(.article-id:contains('Exp.05')) .article-header {
 }
 
 .mode-icon {
-    width: 80px; height: 80px;
+    width: 80px;
+    height: 80px;
     border: 2px solid var(--color-line);
     border-radius: 50%;
     position: relative;
@@ -1847,53 +2527,115 @@ body:has(.article-id:contains('Exp.05')) .article-header {
 /* 1. 伝導 (接触) */
 .conduction-icon::after {
     content: '';
-    width: 100%; height: 50%;
-    background: #555; /* フライパン */
-    position: absolute; bottom: 0;
+    width: 100%;
+    height: 50%;
+    background: #555;
+    /* フライパン */
+    position: absolute;
+    bottom: 0;
 }
+
 .conduction-icon::before {
     content: '';
-    width: 40px; height: 20px;
-    background: #E57373; /* 食材（熱伝導） */
-    position: absolute; bottom: 0;
+    width: 40px;
+    height: 20px;
+    background: #E57373;
+    /* 食材（熱伝導） */
+    position: absolute;
+    bottom: 0;
     z-index: 2;
     border-radius: 5px 5px 0 0;
     animation: heatUp 2s infinite alternate;
 }
-@keyframes heatUp { from { background: #555; } to { background: #FF5722; } }
+
+@keyframes heatUp {
+    from {
+        background: #555;
+    }
+
+    to {
+        background: #FF5722;
+    }
+}
 
 /* 2. 対流 (波) */
-.convection-icon { background: #223; }
+.convection-icon {
+    background: #223;
+}
+
 .arrow-wave {
-    width: 40px; height: 40px;
+    width: 40px;
+    height: 40px;
     border: 2px solid transparent;
     border-top: 2px solid #4FC3F7;
     border-radius: 50%;
-    position: absolute; top: 50%;
+    position: absolute;
+    top: 50%;
     animation: convectionSpin 2s infinite linear;
 }
-.delay { animation-delay: 1s; width: 20px; height: 20px; }
+
+.delay {
+    animation-delay: 1s;
+    width: 20px;
+    height: 20px;
+}
+
 @keyframes convectionSpin {
-    0% { transform: translate(-50%, -50%) rotate(0deg); opacity: 0; }
-    50% { opacity: 1; }
-    100% { transform: translate(-50%, -50%) rotate(360deg); opacity: 0; }
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+        opacity: 0;
+    }
 }
 
 /* 3. 放射 (光線) */
-.radiation-icon { background: #222; }
+.radiation-icon {
+    background: #222;
+}
+
 .ray {
-    position: absolute; bottom: 10px; left: 50%;
-    width: 2px; height: 30px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 2px;
+    height: 30px;
     background: #FFD54F;
     transform-origin: bottom center;
     animation: radiate 1.5s infinite;
 }
-.r1 { transform: translateX(-50%) rotate(-30deg); }
-.r2 { transform: translateX(-50%) rotate(0deg); animation-delay: 0.2s; }
-.r3 { transform: translateX(-50%) rotate(30deg); animation-delay: 0.4s; }
+
+.r1 {
+    transform: translateX(-50%) rotate(-30deg);
+}
+
+.r2 {
+    transform: translateX(-50%) rotate(0deg);
+    animation-delay: 0.2s;
+}
+
+.r3 {
+    transform: translateX(-50%) rotate(30deg);
+    animation-delay: 0.4s;
+}
+
 @keyframes radiate {
-    0% { height: 10px; opacity: 0.5; }
-    100% { height: 40px; opacity: 0; }
+    0% {
+        height: 10px;
+        opacity: 0.5;
+    }
+
+    100% {
+        height: 40px;
+        opacity: 0;
+    }
 }
 
 
@@ -1932,10 +2674,27 @@ body:has(.article-id:contains('Exp.05')) .article-header {
 }
 
 /* 材質ごとの色 */
-.copper { background: #B87333; } /* 銅色 */
-.aluminum { background: #D3D3D3; } /* アルミ色 */
-.iron { background: #444; color: #fff; } /* 鉄色 */
-.stainless { background: #888; } /* ステンレス色 */
+.copper {
+    background: #B87333;
+}
+
+/* 銅色 */
+.aluminum {
+    background: #D3D3D3;
+}
+
+/* アルミ色 */
+.iron {
+    background: #444;
+    color: #fff;
+}
+
+/* 鉄色 */
+.stainless {
+    background: #888;
+}
+
+/* ステンレス色 */
 
 /* 記事ヘッダー背景（個別設定） */
 
@@ -1948,14 +2707,559 @@ body:has(.article-id:contains('Exp.05')) .article-header {
     border-bottom: none;
     z-index: 1;
 }
+
 .header-heat::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: rgba(15, 15, 16, 0.7);
     z-index: -1;
 }
-.header-heat .article-main-title, .header-heat .lead {
+
+.header-aroma .article-main-title,
+.header-aroma .lead {
     color: #F2F2F2;
-    text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* --- 記事ヘッダー背景設定 (Article 09) --- */
+
+/* 記事ごとに背景を変えるための個別設定 */
+/* HTML側でクラスを追加する必要があります */
+
+.header-aroma {
+    background-image: url('aroma-bg.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 100px 40px;
+    border-bottom: none;
+    z-index: 1;
+}
+
+.header-aroma::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 15, 16, 0.7);
+    /* 文字を見やすくするフィルター */
+    z-index: -1;
+}
+
+.header-aroma .article-main-title,
+.header-aroma .lead {
+    color: #F2F2F2;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* --- Article 10: Heat Transfer Specific Styles --- */
+
+/* 伝熱3形態図解 */
+.heat-diagram {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 40px 10px;
+    margin: 40px 0;
+    border: 1px dashed var(--color-line);
+    background: rgba(255, 255, 255, 0.02);
+    flex-wrap: wrap;
+}
+
+.heat-mode {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.heat-mode h3 {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    margin: 15px 0 10px;
+    color: var(--color-accent);
+}
+
+.heat-mode p {
+    font-size: 0.8rem;
+    color: var(--color-sub);
+    line-height: 1.5;
+}
+
+.mode-icon {
+    width: 80px;
+    height: 80px;
+    border: 2px solid var(--color-line);
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1a1a1a;
+    overflow: hidden;
+}
+
+/* 1. 伝導 (接触) */
+.conduction-icon::after {
+    content: '';
+    width: 100%;
+    height: 50%;
+    background: #555;
+    /* フライパン */
+    position: absolute;
+    bottom: 0;
+}
+
+.conduction-icon::before {
+    content: '';
+    width: 40px;
+    height: 20px;
+    background: #E57373;
+    /* 食材（熱伝導） */
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    border-radius: 5px 5px 0 0;
+    animation: heatUp 2s infinite alternate;
+}
+
+@keyframes heatUp {
+    from {
+        background: #555;
+    }
+
+    to {
+        background: #FF5722;
+    }
+}
+
+/* 2. 対流 (波) */
+.convection-icon {
+    background: #223;
+}
+
+.arrow-wave {
+    width: 40px;
+    height: 40px;
+    border: 2px solid transparent;
+    border-top: 2px solid #4FC3F7;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    animation: convectionSpin 2s infinite linear;
+}
+
+.delay {
+    animation-delay: 1s;
+    width: 20px;
+    height: 20px;
+}
+
+@keyframes convectionSpin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* 3. 放射 (光線) */
+.radiation-icon {
+    background: #222;
+}
+
+.ray {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 2px;
+    height: 30px;
+    background: #FFD54F;
+    transform-origin: bottom center;
+    animation: radiate 1.5s infinite;
+}
+
+.r1 {
+    transform: translateX(-50%) rotate(-30deg);
+}
+
+.r2 {
+    transform: translateX(-50%) rotate(0deg);
+    animation-delay: 0.2s;
+}
+
+.r3 {
+    transform: translateX(-50%) rotate(30deg);
+    animation-delay: 0.4s;
+}
+
+@keyframes radiate {
+    0% {
+        height: 10px;
+        opacity: 0.5;
+    }
+
+    100% {
+        height: 40px;
+        opacity: 0;
+    }
+}
+
+
+/* 熱伝導率チャート (Bar Chart) */
+#conductivity-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 0;
+    border-left: 1px solid var(--color-line);
+}
+
+.bar-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.material-name {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--color-text);
+}
+
+.bar {
+    height: 25px;
+    background: var(--color-sub);
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: #000;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+/* 材質ごとの色 */
+.copper {
+    background: #B87333;
+}
+
+/* 銅色 */
+.aluminum {
+    background: #D3D3D3;
+}
+
+/* アルミ色 */
+.iron {
+    background: #444;
+    color: #fff;
+}
+
+/* 鉄色 */
+.stainless {
+    background: #888;
+}
+
+/* ステンレス色 */
+
+/* 記事ヘッダー背景（個別設定） */
+
+.header-heat {
+    background-image: url('heat-bg.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 100px 40px;
+    border-bottom: none;
+    z-index: 1;
+}
+
+.header-heat::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 15, 16, 0.7);
+    z-index: -1;
+}
+
+.header-heat .article-main-title,
+.header-heat .lead {
+    color: #F2F2F2;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* --- Articles 12-20 Header Styles --- */
+
+/* Exp.12 Pectin (Texture) -> Starch BG */
+.header-pec {
+    background-image: url('starch-bg.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 100px 40px;
+    border-bottom: none;
+    z-index: 1;
+}
+
+.header-pec::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 15, 16, 0.7);
+    z-index: -1;
+}
+
+.header-pec .article-main-title,
+.header-pec .lead {
+    color: #F2F2F2;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Exp.13 Lacto (Fermentation) -> Preservation BG */
+.header-lac {
+    background-image: url('preservation-bg.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 100px 40px;
+    border-bottom: none;
+    z-index: 1;
+}
+
+.header-lac::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 15, 16, 0.7);
+    z-index: -1;
+}
+
+.header-lac .article-main-title,
+.header-lac .lead {
+    color: #F2F2F2;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Exp.14 Fish Aging (ATP) -> Myoglobin BG */
+.header-fish {
+    background-image: url('myoglobin-bg.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 100px 40px;
+    border-bottom: none;
+    z-index: 1;
+}
+
+.header-fish::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 15, 16, 0.7);
+    z-index: -1;
+}
+
+.header-fish .article-main-title,
+.header-fish .lead {
+    color: #F2F2F2;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Exp.15 Sous-vide -> Heat BG */
+.header-sousvide {
+    background-image: url('heat-bg.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 100px 40px;
+    border-bottom: none;
+    z-index: 1;
+}
+
+.header-sousvide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 15, 16, 0.7);
+    z-index: -1;
+}
+
+.header-sousvide .article-main-title,
+.header-sousvide .lead {
+    color: #F2F2F2;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Exp.16 Sugar -> Starch BG */
+.header-sugar {
+    background-image: url('starch-bg.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 100px 40px;
+    border-bottom: none;
+    z-index: 1;
+}
+
+.header-sugar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 15, 16, 0.7);
+    z-index: -1;
+}
+
+.header-sugar .article-main-title,
+.header-sugar .lead {
+    color: #F2F2F2;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Exp.17 Taste -> Aroma BG */
+.header-taste {
+    background-image: url('aroma-bg.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 100px 40px;
+    border-bottom: none;
+    z-index: 1;
+}
+
+.header-taste::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 15, 16, 0.7);
+    z-index: -1;
+}
+
+.header-taste .article-main-title,
+.header-taste .lead {
+    color: #F2F2F2;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Exp.18 Chlorophyll -> Preservation BG (as fallback for green/plant) */
+.header-chloro {
+    background-image: url('preservation-bg.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 100px 40px;
+    border-bottom: none;
+    z-index: 1;
+}
+
+.header-chloro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 15, 16, 0.7);
+    z-index: -1;
+}
+
+.header-chloro .article-main-title,
+.header-chloro .lead {
+    color: #F2F2F2;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Exp.19 Anthocyanin -> Myoglobin BG (Red/Purple) */
+.header-antho {
+    background-image: url('myoglobin-bg.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 100px 40px;
+    border-bottom: none;
+    z-index: 1;
+}
+
+.header-antho::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 15, 16, 0.7);
+    z-index: -1;
+}
+
+.header-antho .article-main-title,
+.header-antho .lead {
+    color: #F2F2F2;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Exp.20 Microwave -> Heat BG */
+.header-micro {
+    background-image: url('heat-bg.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 100px 40px;
+    border-bottom: none;
+    z-index: 1;
+}
+
+.header-micro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 15, 16, 0.7);
+    z-index: -1;
+}
+
+.header-micro .article-main-title,
+.header-micro .lead {
+    color: #F2F2F2;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
