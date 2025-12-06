@@ -3007,14 +3007,209 @@ body:has(.article-id:contains('Exp.05')) .article-header {
 .header-heat .article-main-title,
 .header-heat .lead {
     color: #F2F2F2;
+    width: 100%;
+    height: 50%;
+    background: #555;
+    /* フライパン */
+    position: absolute;
+    bottom: 0;
+}
+
+.conduction-icon::before {
+    content: '';
+    width: 40px;
+    height: 20px;
+    background: #E57373;
+    /* 食材（熱伝導） */
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    border-radius: 5px 5px 0 0;
+    animation: heatUp 2s infinite alternate;
+}
+
+@keyframes heatUp {
+    from {
+        background: #555;
+    }
+
+    to {
+        background: #FF5722;
+    }
+}
+
+/* 2. 対流 (波) */
+.convection-icon {
+    background: #223;
+}
+
+.arrow-wave {
+    width: 40px;
+    height: 40px;
+    border: 2px solid transparent;
+    border-top: 2px solid #4FC3F7;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    animation: convectionSpin 2s infinite linear;
+}
+
+.delay {
+    animation-delay: 1s;
+    width: 20px;
+    height: 20px;
+}
+
+@keyframes convectionSpin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* 3. 放射 (光線) */
+.radiation-icon {
+    background: #222;
+}
+
+.ray {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 2px;
+    height: 30px;
+    background: #FFD54F;
+    transform-origin: bottom center;
+    animation: radiate 1.5s infinite;
+}
+
+.r1 {
+    transform: translateX(-50%) rotate(-30deg);
+}
+
+.r2 {
+    transform: translateX(-50%) rotate(0deg);
+    animation-delay: 0.2s;
+}
+
+.r3 {
+    transform: translateX(-50%) rotate(30deg);
+    animation-delay: 0.4s;
+}
+
+@keyframes radiate {
+    0% {
+        height: 10px;
+        opacity: 0.5;
+    }
+
+    100% {
+        height: 40px;
+        opacity: 0;
+    }
+}
+
+
+/* 熱伝導率チャート (Bar Chart) */
+#conductivity-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 0;
+    border-left: 1px solid var(--color-line);
+}
+
+.bar-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.material-name {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--color-text);
+}
+
+.bar {
+    height: 25px;
+    background: var(--color-sub);
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: #000;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+/* 材質ごとの色 */
+.copper {
+    background: #B87333;
+}
+
+/* 銅色 */
+.aluminum {
+    background: #D3D3D3;
+}
+
+/* アルミ色 */
+.iron {
+    background: #444;
+    color: #fff;
+}
+
+/* 鉄色 */
+.stainless {
+    background: #888;
+}
+
+/* ステンレス色 */
+
+/* 記事ヘッダー背景（個別設定） */
+
+.header-heat {
+    background-image: url('heat-bg.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 100px 40px;
+    border-bottom: none;
+    z-index: 1;
+}
+
+.header-heat::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 15, 16, 0.7);
+    z-index: -1;
+}
+
+.header-heat .article-main-title,
+.header-heat .lead {
+    color: #F2F2F2;
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
 /* --- Articles 12-20 Header Styles --- */
 
-/* Exp.12 Pectin (Texture) -> Starch BG */
+/* Exp.12 Pectin (Texture) */
 .header-pec {
-    background-image: url('starch-bg.png');
+    background-image: url('pectin-bg.png');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -3040,9 +3235,9 @@ body:has(.article-id:contains('Exp.05')) .article-header {
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
-/* Exp.13 Lacto (Fermentation) -> Preservation BG */
+/* Exp.13 Lacto (Fermentation) */
 .header-lac {
-    background-image: url('preservation-bg.png');
+    background-image: url('lacto-bg.png');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -3068,9 +3263,9 @@ body:has(.article-id:contains('Exp.05')) .article-header {
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
-/* Exp.14 Fish Aging (ATP) -> Myoglobin BG */
+/* Exp.14 Fish Aging (ATP) */
 .header-fish {
-    background-image: url('myoglobin-bg.png');
+    background-image: url('fish-bg.png');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -3096,9 +3291,9 @@ body:has(.article-id:contains('Exp.05')) .article-header {
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
-/* Exp.15 Sous-vide -> Heat BG */
+/* Exp.15 Sous-vide (Heat) */
 .header-sousvide {
-    background-image: url('heat-bg.png');
+    background-image: url('sousvide-bg.png');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -3124,9 +3319,9 @@ body:has(.article-id:contains('Exp.05')) .article-header {
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
-/* Exp.16 Sugar -> Starch BG */
+/* Exp.16 Sugar (Reaction) */
 .header-sugar {
-    background-image: url('starch-bg.png');
+    background-image: url('sugar-bg.png');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -3152,9 +3347,9 @@ body:has(.article-id:contains('Exp.05')) .article-header {
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
-/* Exp.17 Taste -> Aroma BG */
+/* Exp.17 Taste (Sensory) */
 .header-taste {
-    background-image: url('aroma-bg.png');
+    background-image: url('taste-bg.png');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -3180,9 +3375,9 @@ body:has(.article-id:contains('Exp.05')) .article-header {
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
-/* Exp.18 Chlorophyll -> Preservation BG (as fallback for green/plant) */
+/* Exp.18 Chlorophyll (Ingredient) */
 .header-chloro {
-    background-image: url('preservation-bg.png');
+    background-image: url('chloro-bg.png');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -3208,9 +3403,9 @@ body:has(.article-id:contains('Exp.05')) .article-header {
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
-/* Exp.19 Anthocyanin -> Myoglobin BG (Red/Purple) */
+/* Exp.19 Anthocyanin (Ingredient) */
 .header-antho {
-    background-image: url('myoglobin-bg.png');
+    background-image: url('antho-bg.png');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -3236,9 +3431,9 @@ body:has(.article-id:contains('Exp.05')) .article-header {
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
-/* Exp.20 Microwave -> Heat BG */
+/* Exp.20 Microwave (Technique) */
 .header-micro {
-    background-image: url('heat-bg.png');
+    background-image: url('micro-bg.png');
     background-size: cover;
     background-position: center;
     position: relative;
